@@ -1,5 +1,11 @@
+import EmptyCart from 'components/CartPageComponents/EmptyCart/EmptyCart';
+
 const Cart = () => {
-  return <>Cart</>;
+  return (
+    <>
+      <EmptyCart />
+    </>
+  );
 };
 
 export default Cart;
