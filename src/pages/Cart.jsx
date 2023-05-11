@@ -1,11 +1,13 @@
-import EmptyCart from 'components/CartPageComponents/EmptyCart/EmptyCart';
+// import EmptyCart from 'components/CartPageComponents/EmptyCart/EmptyCart';
+import CartComponent from 'components/CartPageComponents/CartComponent/CartComponent';
 
-const Cart = () => {
+const CartPage = () => {
   return (
     <>
-      <EmptyCart />
+      {/* <EmptyCart /> */}
+      <CartComponent />
     </>
   );
 };
 
-export default Cart;
+export default CartPage;
