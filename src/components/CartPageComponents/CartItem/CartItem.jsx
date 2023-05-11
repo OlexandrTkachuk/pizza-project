@@ -20,6 +20,7 @@ import {
 
 const CartItem = ({ item }) => {
   const [count, setCount] = useState(1);
+  const { imageUrl, title, price } = item;
 
   const handleIncrement = () => setCount(prev => prev + 1);
   const handleDecrement = () => {
@@ -29,12 +30,12 @@ const CartItem = ({ item }) => {
   };
 
   return (
-    <CartItemWrapper key={item.id}>
+    <CartItemWrapper>
       <CartWrapper>
-        <CartItemImage src={item.imageUrl} alt="" />
+        <CartItemImage src={imageUrl} alt="" />
 
         <CartItemDesc>
-          <CartItemTitle>{item.title}</CartItemTitle>
+          <CartItemTitle>{title}</CartItemTitle>
           <CartItemText>тонкое тесто, 26 см.</CartItemText>
         </CartItemDesc>
       </CartWrapper>
@@ -50,7 +51,7 @@ const CartItem = ({ item }) => {
           <PlusIcon size={32} color="#FE5F1E" onClick={handleIncrement} />
         </CountWrapper>
 
-        <CartPriceText>{count * item.price}</CartPriceText>
+        <CartPriceText>{count * price}</CartPriceText>
 
         <DeleteIcon size={32} color="#D7D7D7" />
       </PriceWrapper>

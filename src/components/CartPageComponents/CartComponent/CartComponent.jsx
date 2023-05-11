@@ -43,12 +43,12 @@ const CartComponent = () => {
       <TopBlockWrapper>
         <TopBlockTitle>
           <CartIcon />
-          <Title>Корзина</Title>
+          <Title>Кошик</Title>
         </TopBlockTitle>
 
         <ButtonTrash>
           <TrashIcon />
-          <TrashText>Очистить корзину</TrashText>
+          <TrashText>очистити кошик</TrashText>
         </ButtonTrash>
       </TopBlockWrapper>
 
