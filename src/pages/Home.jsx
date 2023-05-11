@@ -1,5 +1,12 @@
+// components
+import Homebar from 'components/HomeBar/HomeBar';
+
 const Home = () => {
-  return <>Home</>;
+  return (
+    <>
+      <Homebar />
+    </>
+  );
 };
 
 export default Home;
