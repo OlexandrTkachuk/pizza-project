@@ -7,8 +7,11 @@ import { NavLink } from 'react-router-dom';
 export const Container = styled.main`
   width: 100%;
   margin: 36px auto;
-  // max-width: 820px;
-  // margin: 94px auto;
+
+  @media screen and (min-width: 1024px) {
+    max-width: 820px;
+    margin: 94px auto;
+  }
 `;
 
 export const TopBlockWrapper = styled.div`
@@ -17,7 +20,7 @@ export const TopBlockWrapper = styled.div`
   align-items: center;
   margin-bottom: 20px;
 
-  @media and screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     margin-bottom: 30px;
   }
 `;
@@ -28,7 +31,7 @@ export const TopBlockTitle = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media and screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     gap: 17px;
   }
 `;
@@ -41,7 +44,7 @@ export const Title = styled.h2`
   letter-spacing: 0.01em;
   color: #000000;
 
-  @media and screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 32px;
     line-height: 39px;
   }
@@ -52,7 +55,7 @@ export const CartIcon = styled(SlBasket)`
   height: 18px;
   color: #3f3f3f;
 
-  @media and screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 29px;
     height: 29px;
   }
@@ -68,7 +71,7 @@ export const ButtonTrash = styled.button`
   cursor: pointer;
   transition: all 250ms ease;
 
-  @media and screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     gap: 8px;
   }
 
@@ -82,7 +85,7 @@ export const TrashIcon = styled(BiTrash)`
   width: 18px;
   height: 18px;
 
-  @media and screen(min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 20px;
     height: 20px;
   }
@@ -101,7 +104,7 @@ export const CartList = styled.ul`
   flex-direction: column;
   gap: 16px;
 
-  @media and screen (mid-width: 768px) {
+  @media screen and (mid-width: 768px) {
     gap: 30px;
   }
 `;
@@ -112,7 +115,7 @@ export const TotalInfoWrapper = styled.div`
   align-items: center;
   margin: 20px auto;
 
-  @media and screen (mid-width: 768px) {
+  @media screen and (mid-width: 768px) {
     margin: 40px auto;
   }
 `;
@@ -125,7 +128,7 @@ export const TotalInfoText = styled.p`
   letter-spacing: 0.01em;
   color: #000000;
 
-  @media and screen (mid-width: 768px) {
+  @media screen and (mid-width: 768px) {
     font-size: 22px;
     line-height: 27px;
   }
@@ -150,7 +153,7 @@ export const ButtonBack = styled(NavLink)`
   transition: all 250ms ease;
   padding: 8px 12px;
 
-  @media and screen(min-width: 768px) {
+  @media screen and (min-width: 768px) {
     padding: 16px;
   }
 
@@ -168,7 +171,7 @@ export const ButtonBackText = styled.p`
   color: #cacaca;
   margin-left: 4px;
 
-  @media and screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 16px;
     line-height: 19px;
   }
@@ -182,7 +185,7 @@ export const ButtonPay = styled(NavLink)`
   transition: all 250ms ease;
   padding: 8px 12px;
 
-  @media and screen(min-width: 768px) {
+  @media screen and (min-width: 768px) {
     padding: 16px;
   }
 
@@ -199,7 +202,7 @@ export const ButtonPayText = styled.p`
   text-align: center;
   color: #ffffff;
 
-  @media and screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 16px;
     line-height: 19px;
   }

@@ -9,7 +9,7 @@ export const MinusIcon = styled(FiMinusCircle)`
   width: 22px;
   height: 22px;
 
-  @media and screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 28px;
     height: 28px;
   }
@@ -25,7 +25,7 @@ export const PlusIcon = styled(FiPlusCircle)`
   width: 22px;
   height: 22px;
 
-  @media and screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 28px;
     height: 28px;
   }
@@ -41,7 +41,7 @@ export const DeleteIcon = styled(AiOutlineCloseCircle)`
   width: 22px;
   height: 22px;
 
-  @media and screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 28px;
     height: 28px;
   }
@@ -56,7 +56,7 @@ export const CountWrapper = styled.div`
   // min-width: 102px;
   text-align: center;
 
-  @media and screen(min-width: 768px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,7 +74,7 @@ export const CountText = styled.p`
   color: #000000;
   user-select: none;
 
-  @media and screen(min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 22px;
     line-height: 27px;
   }
@@ -86,7 +86,7 @@ export const PriceWrapper = styled.div`
   align-items: center;
   flex: 2.5;
 
-  @media and screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     flex: 3.5;
   }
 `;
@@ -97,7 +97,8 @@ export const CartWrapper = styled.div`
   align-items: center;
   flex: 4;
 
-  @media and screen (min-width: 768px) {
+  @media screen and (min
+ -width: 768px) {
     flex: 3.5;
   }
 `;
@@ -110,7 +111,7 @@ export const CartItemWrapper = styled.li`
   padding-top: 20px;
   gap: 20px;
 
-  @media and screen(min-width: 768px) {
+  @media screen and (min-width: 768px) {
     padding-top: 30px;
   }
 `;
@@ -118,7 +119,7 @@ export const CartItemWrapper = styled.li`
 export const CartItemDesc = styled.div`
   min-width: 120px;
 
-  @media and screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     min-width: 280px;
   }
 `;
@@ -129,7 +130,7 @@ export const CartItemImage = styled.img`
   margin-right: 8px;
   user-select: none;
 
-  @media and screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 80px;
     height: 80px;
     margin-right: 15px;
@@ -146,7 +147,7 @@ export const CartItemTitle = styled.h3`
   margin-bottom: 3px;
   user-select: none;
 
-  @media and screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 22px;
     line-height: 27px;
   }
@@ -160,7 +161,7 @@ export const CartItemText = styled.p`
   font-size: 14px;
   line-height: 18px;
 
-  @media and screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 18px;
     line-height: 22px;
   }
@@ -175,7 +176,7 @@ export const CartPriceText = styled.p`
   font-size: 17px;
   line-height: 18px;
 
-  @media and screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 18px;
     line-height: 22px;
   }
