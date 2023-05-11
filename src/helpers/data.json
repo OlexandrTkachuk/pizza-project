@@ -1,0 +1,190 @@
+[
+  {
+    "id": 0,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/amore-500x500.webp",
+    "title": "Аморе 🌱",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 216,
+    "category": 5,
+    "rating": 7,
+    "ingredients": [
+      "Cоус вершковий",
+      "сир моцарела",
+      "куряче філе",
+      "помідори черрі",
+      "кукурудза",
+      "рукола",
+      "сир пармезан"
+    ]
+  },
+  {
+    "id": 1,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2023/03/bbq-500x500.webp",
+    "title": "BBQ піца",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 197,
+    "category": 0,
+    "rating": 4,
+    "ingredients": [
+      "Основа",
+      "соус BBQ",
+      "сир моцарела",
+      "шинка",
+      "салямі",
+      "ковбаски мисливські",
+      "рукола"
+    ]
+  },
+  {
+    "id": 2,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2023/03/rancho-500x500.webp",
+    "title": "Ранчо",
+    "types": [0],
+    "sizes": [26, 40],
+    "price": 199,
+    "category": 3,
+    "rating": 6,
+    "ingredients": [
+      "Основа",
+      "соус BBQ",
+      "сир моцарела",
+      "шинка",
+      "куряче філе",
+      "печериці",
+      "цибуля",
+      "помідори",
+      "рукола"
+    ]
+  },
+  {
+    "id": 3,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/kaprichoza-1-500x500.webp",
+    "title": "Капрічоза",
+    "types": [0],
+    "sizes": [26, 40],
+    "price": 217,
+    "category": 1,
+    "rating": 4,
+    "ingredients": [
+      "Соус томатний",
+      "сир моцарела",
+      "шинка",
+      "салямі",
+      "гриби",
+      "помідори"
+    ]
+  },
+  {
+    "id": 4,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/kozaczka-500x500.webp",
+    "title": "Козацька",
+    "types": [1],
+    "sizes": [26, 30, 40],
+    "price": 227,
+    "category": 2,
+    "rating": 2,
+    "ingredients": [
+      "Cоус томатний",
+      "сир моцарела",
+      "шинка",
+      "салямі",
+      "мисливські ковбаски",
+      "огірки мариновані",
+      "цибуля",
+      "чилі"
+    ]
+  },
+  {
+    "id": 5,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/spajsi-kurka-500x500.webp",
+    "title": "Спайсі Курка",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 201,
+    "category": 3,
+    "rating": 8,
+    "ingredients": [
+      "Соус томатний",
+      "сир моцарела",
+      "куряче філе",
+      "кукурудза",
+      "соус солодкий чилі"
+    ]
+  },
+  {
+    "id": 6,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/gavajska-500x500.webp",
+    "title": "Гавайська",
+    "types": [0],
+    "sizes": [30, 40],
+    "price": 228,
+    "category": 2,
+    "rating": 2,
+    "ingredients": [
+      "Соус вершковий",
+      "сир моцарела",
+      "куряче філе",
+      "ананас",
+      "кукурудза",
+      "маслини"
+    ]
+  },
+  {
+    "id": 7,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/picapronto-500x500.webp",
+    "title": "Піца Пронто",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 263,
+    "category": 1,
+    "rating": 9,
+    "ingredients": [
+      "Cоус томатний",
+      "сир моцарела",
+      "куряче філе",
+      "салямі",
+      "шинка",
+      "бекон",
+      "помідори"
+    ]
+  },
+  {
+    "id": 8,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2023/03/chiken-500x500.webp",
+    "title": "Чікен",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 179,
+    "category": 4,
+    "rating": 10,
+    "ingredients": [
+      "Основа",
+      "майонез",
+      "сир моцарела",
+      "куряче філе",
+      "помідори",
+      "цибуля",
+      "рукола"
+    ]
+  },
+  {
+    "id": 9,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/tehaska-500x500.webp",
+    "title": "Техас",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 228,
+    "category": 5,
+    "rating": 10,
+    "ingredients": [
+      "Cоуc томатний",
+      "сир моцарела",
+      "куряче філе",
+      "шинка",
+      "помідори",
+      "соус солодкий чилі"
+    ]
+  }
+]
