@@ -27,18 +27,20 @@ export const PizzaGallery = styled.ul`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  // justify-content: space-between;
-  justify-content: center;
   gap: 16px;
   margin: 0 auto;
+  justify-content: center;
 
   @media screen and (min-width: 768px) {
     gap: 36px;
-    justify-content: center;
-    max-width: 980px;
+    max-width: 596px;
+    margin: 0 auto;
+    justify-content: start;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1232px) {
     gap: 60px;
+    max-width: 960px;
+    justify-content: start;
   }
 `;

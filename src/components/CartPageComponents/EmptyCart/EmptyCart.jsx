@@ -1,6 +1,7 @@
 // styles
 import {
   Container,
+  EmptyCartButton,
   EmptyCartImage,
   EmptyCartText,
   EmptyCartTitle,
@@ -23,6 +24,8 @@ const EmptyCart = () => {
         </EmptyCartText>
 
         <EmptyCartImage src={emptyImage} alt="empty Cart" />
+
+        <EmptyCartButton to="/">Повернутись назад</EmptyCartButton>
       </EmptyCartWrapper>
     </Container>
   );
