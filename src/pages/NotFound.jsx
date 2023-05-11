@@ -1,5 +1,8 @@
+// components
+import NotFoundComponent from 'components/NotFoundComponent/NotFoundComponent';
+
 const NotFound = () => {
-  return <>Not Found</>;
+  return <NotFoundComponent />;
 };
 
 export default NotFound;

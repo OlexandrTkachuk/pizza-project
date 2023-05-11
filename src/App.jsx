@@ -5,6 +5,9 @@ import { Route, Routes } from 'react-router-dom';
 // components
 import Header from 'components/Header/Header';
 
+// units
+import ScrollToTop from 'units/scrollToTop';
+
 // styles
 import { Container } from 'components/Container/Container.styled';
 
@@ -16,6 +19,8 @@ const NotFoundPage = lazy(() => import('./pages/NotFound'));
 const App = () => {
   return (
     <Container>
+      <ScrollToTop />
+
       <Header />
 
       <Suspense fallback="Loading...">
