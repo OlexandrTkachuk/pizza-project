@@ -19,10 +19,10 @@ const Home = () => {
   useEffect(() => {
     const category = categoryId > 0 ? `category=${categoryId}` : '';
     const order = selectedSortType.value.includes('-') ? 'desc' : 'asc';
-    const sort = `sortBy=${selectedSortType.value}&order=${order}`;
+    const sortBy = selectedSortType.value.replace('-', '');
 
     fetch(
-      `https://645604705f9a4f236138e078.mockapi.io/items?${category}&${sort}`
+      `https://645604705f9a4f236138e078.mockapi.io/items?${category}&sortBy=${sortBy}&order=${order}`
     )
       .then(res => res.json())
       .then(data => {
@@ -46,7 +46,7 @@ const Home = () => {
         onSortTypeClick={handleSortTypeChange}
       />
 
-      <PizzaList items={items} isLoading={isLoading} />
+      <PizzaList items={items} isLoading={isLoading} categoryId={categoryId} />
     </>
   );
 };

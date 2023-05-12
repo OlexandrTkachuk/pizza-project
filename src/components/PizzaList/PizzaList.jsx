@@ -5,10 +5,19 @@ import Skeleton from 'components/Skeleton/Skeleto';
 // styles
 import { PizzaTitle, PizzaGallery } from './PizzaList.styled';
 
-const PizzaList = ({ items, isLoading }) => {
+const options = [
+  'Всі',
+  "М'ясні",
+  'Вегетаріанські',
+  'Гриль',
+  'Гострі',
+  'Закриті',
+];
+
+const PizzaList = ({ items, isLoading, categoryId }) => {
   return (
     <>
-      <PizzaTitle>Всі піци</PizzaTitle>
+      <PizzaTitle>{options[categoryId]} піци</PizzaTitle>
 
       <PizzaGallery>
         {isLoading
