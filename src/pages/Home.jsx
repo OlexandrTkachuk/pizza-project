@@ -37,6 +37,11 @@ const Home = ({ searchValue }) => {
   const handleCategoryChange = id => setCategoryId(id);
   const handleSortTypeChange = value => setSelectedSortType(value);
 
+  const normalizeSearchValue = searchValue.toLowerCase();
+  const filteredItems = items.filter(item =>
+    item.title.toLowerCase().includes(normalizeSearchValue)
+  );
+
   return (
     <>
       <Homebar
@@ -46,7 +51,11 @@ const Home = ({ searchValue }) => {
         onSortTypeClick={handleSortTypeChange}
       />
 
-      <PizzaList items={items} isLoading={isLoading} categoryId={categoryId} />
+      <PizzaList
+        items={filteredItems}
+        isLoading={isLoading}
+        categoryId={categoryId}
+      />
     </>
   );
 };

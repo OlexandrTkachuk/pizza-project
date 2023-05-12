@@ -16,6 +16,7 @@ const Search = ({ searchValue, setSearchValue }) => {
         placeholder="Введіть назву піци"
         onChange={handleInputChange}
         value={searchValue}
+        autoComplete="on"
       />
       {searchValue !== '' && (
         <CloseIcon onClick={clearInput} primary={searchValue} />

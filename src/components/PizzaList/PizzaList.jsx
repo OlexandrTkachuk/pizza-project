@@ -15,15 +15,17 @@ const options = [
 ];
 
 const PizzaList = ({ items, isLoading, categoryId }) => {
+  const pizzas = items.map(item => <PizzaItem item={item} key={item.id} />);
+
+  const skeletons = [...new Array(10)].map((_, index) => (
+    <Skeleton key={index} />
+  ));
+
   return (
     <>
       <PizzaTitle>{options[categoryId]} піци</PizzaTitle>
 
-      <PizzaGallery>
-        {isLoading
-          ? [...new Array(10)].map((_, index) => <Skeleton key={index} />)
-          : items.map(item => <PizzaItem item={item} key={item.id} />)}
-      </PizzaGallery>
+      <PizzaGallery>{isLoading ? skeletons : pizzas}</PizzaGallery>
     </>
   );
 };
