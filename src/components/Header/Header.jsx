@@ -1,6 +1,9 @@
 // system
 import { Link } from 'react-router-dom';
 
+// components
+import Search from 'components/Search/Search';
+
 // styles
 import {
   ButtonDelimiter,
@@ -20,7 +23,7 @@ import {
 // images
 import logo from '../../assets/logo.png';
 
-const Header = () => {
+const Header = ({ searchValue, setSearchValue }) => {
   return (
     <HeaderWrapper>
       <Container>
@@ -40,6 +43,8 @@ const Header = () => {
             </LogoInfo>
           </StyledLink>
         </LogoWrapper>
+
+        <Search searchValue={searchValue} setSearchValue={setSearchValue} />
 
         <CartWrapper to="/cart">
           <CartText>520 грн.</CartText>

@@ -1,6 +1,7 @@
 // system
 import { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
 
 // components
 import Header from 'components/Header/Header';
@@ -17,15 +18,17 @@ const CartPage = lazy(() => import('./pages/Cart'));
 const NotFoundPage = lazy(() => import('./pages/NotFound'));
 
 const App = () => {
+  const [searchValue, setSearchValue] = useState('');
+
   return (
     <Container>
       <ScrollToTop />
 
-      <Header />
+      <Header setSearchValue={setSearchValue} searchValue={searchValue} />
 
       <Suspense fallback="Loading...">
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage searchValue={searchValue} />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

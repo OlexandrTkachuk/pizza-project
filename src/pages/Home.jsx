@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import Homebar from 'components/HomeBar/HomeBar';
 import PizzaList from 'components/PizzaList/PizzaList';
 
-const Home = () => {
+const Home = ({ searchValue }) => {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
