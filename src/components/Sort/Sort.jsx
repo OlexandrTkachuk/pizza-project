@@ -15,18 +15,18 @@ import {
   SortTextWrapper,
 } from './Sort.styled';
 
-const Sort = () => {
+const popupOptions = [
+  { name: 'популярності', value: 'rating' },
+  { name: 'ціні ⬆', value: 'price' },
+  { name: 'алфавіту', value: 'title' },
+];
+
+const Sort = ({ onSortTypeClick, selectedSortType }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
 
-  const popupOptions = ['популярністю', 'ціною', 'алфавітом'];
-
-  const switchSortMenu = () => {
-    setIsMenuOpen(prev => !prev);
-  };
-
+  const switchSortMenu = () => setIsMenuOpen(prev => !prev);
   const handleOption = index => {
-    setActiveIndex(index);
+    onSortTypeClick(index);
     setIsMenuOpen(prev => !prev);
   };
 
@@ -42,7 +42,7 @@ const Sort = () => {
         <SortTextWrapper>
           <SortLabelBoldText>Сотрування за:</SortLabelBoldText>
           <SortLabelText onClick={switchSortMenu}>
-            {popupOptions[activeIndex]}
+            {selectedSortType.name}
           </SortLabelText>
         </SortTextWrapper>
       </SortLabel>
@@ -53,10 +53,12 @@ const Sort = () => {
             {popupOptions.map((option, index) => (
               <SortPopupItem
                 key={index}
-                onClick={() => handleOption(index)}
-                className={activeIndex === index ? 'active' : ''}
+                onClick={() => handleOption(option)}
+                className={
+                  selectedSortType.name === option.name ? 'active' : ''
+                }
               >
-                {option}
+                {option.name}
               </SortPopupItem>
             ))}
           </SortPopupList>

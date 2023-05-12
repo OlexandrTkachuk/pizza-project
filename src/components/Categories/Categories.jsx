@@ -1,6 +1,3 @@
-// system
-import { useState } from 'react';
-
 // styles
 import { CategoryList, CategoryButton } from './Categories.styled';
 
@@ -13,18 +10,14 @@ const options = [
   'Закриті',
 ];
 
-const Categories = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleActiveIndex = index => setActiveIndex(index);
-
+const Categories = ({ categoryId, onCategoryClick }) => {
   return (
     <CategoryList>
       {options.map((option, index) => (
         <li key={index}>
           <CategoryButton
-            onClick={() => handleActiveIndex(index)}
-            className={activeIndex === index ? 'active' : ''}
+            onClick={() => onCategoryClick(index)}
+            className={categoryId === index ? 'active' : ''}
           >
             {option}
           </CategoryButton>
