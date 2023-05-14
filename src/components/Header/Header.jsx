@@ -23,7 +23,7 @@ import {
 // images
 import logo from '../../assets/logo.png';
 
-const Header = ({ searchValue, setSearchValue }) => {
+const Header = () => {
   return (
     <HeaderWrapper>
       <Container>
@@ -44,7 +44,7 @@ const Header = ({ searchValue, setSearchValue }) => {
           </StyledLink>
         </LogoWrapper>
 
-        <Search searchValue={searchValue} setSearchValue={setSearchValue} />
+        <Search />
 
         <CartWrapper to="/cart">
           <CartText>520 грн.</CartText>

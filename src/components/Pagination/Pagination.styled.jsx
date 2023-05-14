@@ -15,6 +15,10 @@ export const PaginationWrapper = styled(ReactPaginate)`
   font-size: 18px;
   font-weight: 600;
 
+  @media screen and (max-width: 768) {
+    width: 300px;
+  }
+
   .selected a {
     color: #fff;
     background: green;

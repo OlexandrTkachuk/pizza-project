@@ -1,6 +1,10 @@
+import { useContext } from 'react';
 import { CloseIcon, Input, SearchIcon, SearchWrapper } from './Search.styled';
+import { SearchContext } from 'App';
 
-const Search = ({ searchValue, setSearchValue }) => {
+const Search = () => {
+  const { searchValue, setSearchValue } = useContext(SearchContext);
+
   const handleInputChange = event => {
     setSearchValue(event.target.value);
   };

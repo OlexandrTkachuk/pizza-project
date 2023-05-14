@@ -10,10 +10,15 @@ const Homebar = ({
   selectedSortType,
   onCategoryClick,
   onSortTypeClick,
+  clearPage,
 }) => {
   return (
     <HomeBarWrapper>
-      <Categories categoryId={categoryId} onCategoryClick={onCategoryClick} />
+      <Categories
+        categoryId={categoryId}
+        onCategoryClick={onCategoryClick}
+        clearPage={clearPage}
+      />
       <Sort
         selectedSortType={selectedSortType}
         onSortTypeClick={onSortTypeClick}

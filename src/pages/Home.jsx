@@ -1,12 +1,14 @@
 // system
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 
 // components
 import Homebar from 'components/HomeBar/HomeBar';
 import PizzaList from 'components/PizzaList/PizzaList';
 import Pagination from 'components/Pagination/Pagination';
+import { SearchContext } from 'App';
 
-const Home = ({ searchValue }) => {
+const Home = () => {
+  const { searchValue } = useContext(SearchContext);
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -51,6 +53,10 @@ const Home = ({ searchValue }) => {
     setPage(index + 1);
     window.scrollTo(0, 0);
   };
+  const clearPage = () => {
+    setPage(1);
+  };
+  console.log(page);
 
   // local filter logic
   // const normalizeSearchValue = searchValue.toLowerCase();
@@ -61,6 +67,7 @@ const Home = ({ searchValue }) => {
   return (
     <>
       <Homebar
+        clearPage={clearPage}
         categoryId={categoryId}
         onCategoryClick={handleCategoryChange}
         selectedSortType={selectedSortType}

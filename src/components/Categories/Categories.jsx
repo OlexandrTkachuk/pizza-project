@@ -10,13 +10,16 @@ const options = [
   'Спецпропозиції',
 ];
 
-const Categories = ({ categoryId, onCategoryClick }) => {
+const Categories = ({ categoryId, onCategoryClick, clearPage }) => {
   return (
     <CategoryList>
       {options.map((option, index) => (
         <li key={index}>
           <CategoryButton
-            onClick={() => onCategoryClick(index)}
+            onClick={() => {
+              onCategoryClick(index);
+              clearPage();
+            }}
             className={categoryId === index ? 'active' : ''}
           >
             {option}
