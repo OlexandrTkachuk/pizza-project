@@ -8,10 +8,6 @@ export const HeaderWrapper = styled.header`
   border-bottom: 1px solid #f6f6f6;
   padding-bottom: 20px;
   border-bottom: 1px solid lightgrey;
-
-  @media screen and (min-width: 1024px) {
-    padding-bottom: 40px;
-  }
 `;
 
 export const Container = styled.div`

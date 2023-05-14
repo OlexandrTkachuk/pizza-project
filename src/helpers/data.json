@@ -1,31 +1,133 @@
 [
   {
     "id": 0,
-    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/amore-500x500.webp",
-    "title": "Аморе 🌱",
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/4-syry-3-500x500.webp",
+    "title": "4 Сири",
     "types": [0, 1],
-    "sizes": [26, 30, 40],
-    "price": 216,
-    "category": 5,
-    "rating": 7,
+    "sizes": [20, 30, 40],
+    "price": 242,
+    "category": 3,
+    "rating": 1,
     "ingredients": [
       "Cоус вершковий",
       "сир моцарела",
-      "куряче філе",
-      "помідори черрі",
-      "кукурудза",
-      "рукола",
+      "сир дор блю",
+      "сир королівський",
       "сир пармезан"
     ]
   },
   {
     "id": 1,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/kaprichoza-1-500x500.webp",
+    "title": "Капрічоза",
+    "types": [0, 1],
+    "sizes": [20, 30, 40],
+    "price": 217,
+    "category": 1,
+    "rating": 3,
+    "ingredients": [
+      "Соус томатний",
+      "сир моцарела",
+      "шинка",
+      "салямі",
+      "гриби",
+      "помідори"
+    ]
+  },
+  {
+    "id": 2,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/kozaczka-500x500.webp",
+    "title": "Козацька",
+    "types": [0, 1],
+    "sizes": [20, 30, 40],
+    "price": 227,
+    "category": 4,
+    "rating": 4,
+    "ingredients": [
+      "Cоус томатний",
+      "сир моцарела",
+      "шинка",
+      "салямі",
+      "мисливські ковбаски",
+      "огірки мариновані",
+      "цибуля",
+      "чилі"
+    ]
+  },
+  {
+    "id": 3,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/spajsi-kurka-500x500.webp",
+    "title": "Спайсі Курка",
+    "types": [0, 1],
+    "sizes": [20, 30, 40],
+    "price": 189,
+    "category": 1,
+    "rating": 3,
+    "ingredients": [
+      "Соус томатний",
+      "сир моцарела",
+      "шинка",
+      "салямі",
+      "гриби",
+      "помідори"
+    ]
+  },
+  {
+    "id": 4,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/salyami-1-500x500.webp",
+    "title": "Салямі",
+    "types": [0, 1],
+    "sizes": [20, 30, 40],
+    "price": 179,
+    "category": 1,
+    "rating": 4,
+    "ingredients": ["Основа", "томатний соус", "сир моцарелла", "салямі"]
+  },
+  {
+    "id": 5,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/gavajska-500x500.webp",
+    "title": "Гавайська",
+    "types": [0, 1],
+    "sizes": [20, 30, 40],
+    "price": 228,
+    "category": 1,
+    "rating": 2,
+    "ingredients": [
+      "Соус вершковий",
+      "сир моцарела",
+      "куряче філе",
+      "ананас",
+      "кукурудза",
+      "маслини"
+    ]
+  },
+  {
+    "id": 6,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/picapronto-500x500.webp",
+    "title": "Піца Пронто",
+    "types": [0, 1],
+    "sizes": [20, 30, 40],
+    "price": 263,
+    "category": 2,
+    "rating": 3,
+    "ingredients": [
+      "Cоус томатний",
+      "сир моцарела",
+      "куряче філе",
+      "салямі",
+      "шинка",
+      "бекон",
+      "помідори"
+    ]
+  },
+  {
+    "id": 7,
     "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2023/03/bbq-500x500.webp",
     "title": "BBQ піца",
-    "types": [0, 1],
-    "sizes": [26, 30, 40],
+    "types": [0],
+    "sizes": [20, 30, 40],
     "price": 197,
-    "category": 0,
+    "category": 5,
     "rating": 4,
     "ingredients": [
       "Основа",
@@ -38,14 +140,14 @@
     ]
   },
   {
-    "id": 2,
+    "id": 8,
     "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2023/03/rancho-500x500.webp",
     "title": "Ранчо",
     "types": [0],
-    "sizes": [26, 40],
+    "sizes": [20, 30],
     "price": 199,
-    "category": 3,
-    "rating": 6,
+    "category": 5,
+    "rating": 5,
     "ingredients": [
       "Основа",
       "соус BBQ",
@@ -59,106 +161,14 @@
     ]
   },
   {
-    "id": 3,
-    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/kaprichoza-1-500x500.webp",
-    "title": "Капрічоза",
-    "types": [0],
-    "sizes": [26, 40],
-    "price": 217,
-    "category": 1,
-    "rating": 4,
-    "ingredients": [
-      "Соус томатний",
-      "сир моцарела",
-      "шинка",
-      "салямі",
-      "гриби",
-      "помідори"
-    ]
-  },
-  {
-    "id": 4,
-    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/kozaczka-500x500.webp",
-    "title": "Козацька",
-    "types": [1],
-    "sizes": [26, 30, 40],
-    "price": 227,
-    "category": 2,
-    "rating": 2,
-    "ingredients": [
-      "Cоус томатний",
-      "сир моцарела",
-      "шинка",
-      "салямі",
-      "мисливські ковбаски",
-      "огірки мариновані",
-      "цибуля",
-      "чилі"
-    ]
-  },
-  {
-    "id": 5,
-    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/spajsi-kurka-500x500.webp",
-    "title": "Спайсі Курка",
-    "types": [0, 1],
-    "sizes": [26, 30, 40],
-    "price": 201,
-    "category": 3,
-    "rating": 8,
-    "ingredients": [
-      "Соус томатний",
-      "сир моцарела",
-      "куряче філе",
-      "кукурудза",
-      "соус солодкий чилі"
-    ]
-  },
-  {
-    "id": 6,
-    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/gavajska-500x500.webp",
-    "title": "Гавайська",
-    "types": [0],
-    "sizes": [26, 40],
-    "price": 228,
-    "category": 2,
-    "rating": 2,
-    "ingredients": [
-      "Соус вершковий",
-      "сир моцарела",
-      "куряче філе",
-      "ананас",
-      "кукурудза",
-      "маслини"
-    ]
-  },
-  {
-    "id": 7,
-    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/picapronto-500x500.webp",
-    "title": "Піца Пронто",
-    "types": [0, 1],
-    "sizes": [26, 30, 40],
-    "price": 263,
-    "category": 1,
-    "rating": 9,
-    "ingredients": [
-      "Cоус томатний",
-      "сир моцарела",
-      "куряче філе",
-      "салямі",
-      "шинка",
-      "бекон",
-      "помідори"
-    ]
-  },
-  {
-    "id": 8,
+    "id": 9,
     "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2023/03/chiken-500x500.webp",
     "title": "Чікен",
-    "types": [0, 1],
-    "sizes": [26, 30, 40],
+    "types": [0],
+    "sizes": [20, 30],
     "price": 179,
-    "category": 4,
-    "rating": 10,
+    "category": 3,
+    "rating": 6,
     "ingredients": [
       "Основа",
       "майонез",
@@ -170,21 +180,273 @@
     ]
   },
   {
-    "id": 9,
+    "id": 10,
     "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/tehaska-500x500.webp",
     "title": "Техас",
     "types": [0, 1],
-    "sizes": [26, 30, 40],
+    "sizes": [20, 30, 40],
     "price": 228,
-    "category": 5,
-    "rating": 10,
+    "category": 4,
+    "rating": 5,
     "ingredients": [
       "Cоуc томатний",
       "сир моцарела",
       "куряче філе",
       "шинка",
       "помідори",
-      "соус солодкий чилі"
+      "соус гострий чилі"
+    ]
+  },
+  {
+    "id": 11,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/felichita-500x500.webp",
+    "title": "Фелічіта",
+    "types": [0, 1],
+    "sizes": [20, 30, 40],
+    "price": 199,
+    "category": 2,
+    "rating": 4,
+    "ingredients": [
+      "Соус томатний",
+      "сир моцарела",
+      "куряче філе",
+      "бекон",
+      "гриби"
+    ]
+  },
+  {
+    "id": 12,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/paperoni-500x500.webp",
+    "title": "Папероні",
+    "types": [0, 1],
+    "sizes": [20, 30, 40],
+    "price": 207,
+    "category": 1,
+    "rating": 3,
+    "ingredients": ["Соус томатний", "сир моцарела", "папероні"]
+  },
+  {
+    "id": 13,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/proshuto-fungi-500x500.webp",
+    "title": "Прошуто Фунгі",
+    "types": [0, 1],
+    "sizes": [20, 30, 40],
+    "price": 181,
+    "category": 2,
+    "rating": 7,
+    "ingredients": ["Соус томатний", "сир моцарела", "гриби", "шинка"]
+  },
+  {
+    "id": 14,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/4-sezony-500x500.webp",
+    "title": "4 Сезони",
+    "types": [0, 1],
+    "sizes": [20, 30, 40],
+    "price": 215,
+    "category": 5,
+    "rating": 5,
+    "ingredients": [
+      "Соус томатний",
+      "сир моцарела",
+      "папероні",
+      "гриби",
+      "кукурудза",
+      "шинка"
+    ]
+  },
+  {
+    "id": 15,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/amore-500x500.webp",
+    "title": "Аморе",
+    "types": [0, 1],
+    "sizes": [20, 30, 40],
+    "price": 216,
+    "category": 3,
+    "rating": 3,
+    "ingredients": [
+      "Cоус вершковий",
+      "сир моцарела",
+      "куряче філе",
+      "помідори черрі",
+      "кукурудза",
+      "рукола",
+      "сир пармезан"
+    ]
+  },
+  {
+    "id": 16,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/bazylicza-2-500x500.webp",
+    "title": "Базиліца",
+    "types": [0, 1],
+    "sizes": [20, 30, 40],
+    "price": 199,
+    "category": 3,
+    "rating": 4,
+    "ingredients": [
+      "Соус вершковий",
+      "сир моцарела",
+      "сир фета",
+      "помідори",
+      "маслини",
+      "соус песто"
+    ]
+  },
+  {
+    "id": 17,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/karleone-500x500.webp",
+    "title": "Карлеоне",
+    "types": [0, 1],
+    "sizes": [20, 30, 40],
+    "price": 212,
+    "category": 1,
+    "rating": 2,
+    "ingredients": ["Соус томатний", "сир моцарела", "папероні", "сир дор блю"]
+  },
+  {
+    "id": 18,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/salyamikukurudza-kopiya-500x500.webp",
+    "title": "Корнелія",
+    "types": [0, 1],
+    "sizes": [20, 30, 40],
+    "price": 176,
+    "category": 2,
+    "rating": 6,
+    "ingredients": ["Соус вершковий", "сир моцарела", "салямі", "кукурудза"]
+  },
+  {
+    "id": 19,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/margaryta-1-500x500.webp",
+    "title": "Маргарита",
+    "types": [0, 1],
+    "sizes": [20, 30, 40],
+    "price": 145,
+    "category": 3,
+    "rating": 3,
+    "ingredients": ["Соус томатний", "сир моцарела", "помідори"]
+  },
+  {
+    "id": 20,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/meksykanska-2-500x500.webp",
+    "title": "Мексиканська",
+    "types": [0, 1],
+    "sizes": [20, 30, 40],
+    "price": 221,
+    "category": 4,
+    "rating": 5,
+    "ingredients": [
+      "Cоус томатний",
+      "сир моцарела",
+      "бекон",
+      "папероні",
+      "гриби",
+      "перець халапеньо"
+    ]
+  },
+  {
+    "id": 21,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/pesto-500x500.webp",
+    "title": "Песто",
+    "types": [0, 1],
+    "sizes": [20, 30, 40],
+    "price": 211,
+    "category": 2,
+    "rating": 4,
+    "ingredients": [
+      "Cоус томатний",
+      "сир моцарела",
+      "бекон",
+      "шинка",
+      "перець болгарський",
+      "соус песто"
+    ]
+  },
+  {
+    "id": 22,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/z-grusheyu-2-500x500.webp",
+    "title": "Піца з грушею",
+    "types": [0, 1],
+    "sizes": [20, 30, 40],
+    "price": 212,
+    "category": 3,
+    "rating": 6,
+    "ingredients": [
+      "Соус вершковий",
+      "сир моцарела",
+      "сир дор блю",
+      "груша",
+      "горіх грецький"
+    ]
+  },
+  {
+    "id": 23,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/salmone-2-500x500.webp",
+    "title": "Сальмоне",
+    "types": [0],
+    "sizes": [20, 30],
+    "price": 263,
+    "category": 3,
+    "rating": 2,
+    "ingredients": [
+      "Соус вершковий",
+      "сир моцарела",
+      "лосось",
+      "лимон",
+      "тим'ян"
+    ]
+  },
+  {
+    "id": 24,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/suprim-2-500x500.webp",
+    "title": "Супрім",
+    "types": [0, 1],
+    "sizes": [20, 40],
+    "price": 181,
+    "category": 3,
+    "rating": 5,
+    "ingredients": [
+      "Соус томатний",
+      "сир моцарела",
+      "помідори черрі",
+      "сир пармезан",
+      "рукола"
+    ]
+  },
+  {
+    "id": 25,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/czezar-500x500.webp",
+    "title": "Цезар",
+    "types": [0, 1],
+    "sizes": [20, 30, 40],
+    "price": 238,
+    "category": 3,
+    "rating": 4,
+    "ingredients": [
+      "Cоус томатний",
+      "сир моцарела",
+      "куряче філе",
+      "перепелині яйця",
+      "сир пармезан",
+      "сезонний салат",
+      "помідори черрі"
+    ]
+  },
+  {
+    "id": 26,
+    "imageUrl": "https://prontopizza.ua/vinnytsia/wp-content/uploads/sites/21/2021/07/chizburger-500x500.webp",
+    "title": "Чізбургер",
+    "types": [0, 1],
+    "sizes": [20, 30, 40],
+    "price": 196,
+    "category": 5,
+    "rating": 6,
+    "ingredients": [
+      "Соус томатний",
+      "сир моцарела",
+      "бекон",
+      "помідори",
+      "огірки мариновані",
+      "цибуля",
+      "гірчиця"
     ]
   }
 ]

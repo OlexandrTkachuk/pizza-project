@@ -51,9 +51,9 @@ const PizzaItem = ({ item }) => {
 
   const handleFullPrice = () => {
     if (sizes[sizeActiveIndex] === 30) {
-      return `${Math.round(price * 1.2)}`;
-    } else if (sizes[sizeActiveIndex] === 40) {
       return `${Math.round(price * 1.35)}`;
+    } else if (sizes[sizeActiveIndex] === 40) {
+      return `${Math.round(price * 1.65)}`;
     } else {
       return `${price * 1}`;
     }

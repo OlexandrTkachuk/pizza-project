@@ -3,11 +3,11 @@ import { CategoryList, CategoryButton } from './Categories.styled';
 
 const options = [
   'Всі',
+  'Самий ТОП',
   "М'ясні",
   'Вегетаріанські',
-  'Гриль',
   'Гострі',
-  'Закриті',
+  'Спецпропозиції',
 ];
 
 const Categories = ({ categoryId, onCategoryClick }) => {

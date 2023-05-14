@@ -7,11 +7,11 @@ import { PizzaTitle, PizzaGallery } from './PizzaList.styled';
 
 const options = [
   'Всі',
+  'Самий ТОП',
   "М'ясні",
   'Вегетаріанські',
-  'Гриль',
   'Гострі',
-  'Закриті',
+  'Спецпропозиції',
 ];
 
 const PizzaList = ({ items, isLoading, categoryId }) => {
@@ -23,7 +23,7 @@ const PizzaList = ({ items, isLoading, categoryId }) => {
 
   return (
     <>
-      <PizzaTitle>{options[categoryId]} піци</PizzaTitle>
+      <PizzaTitle>{options[categoryId]}</PizzaTitle>
 
       <PizzaGallery>{isLoading ? skeletons : pizzas}</PizzaGallery>
     </>
