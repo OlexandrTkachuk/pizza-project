@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { fetchPizzasByCategory } from './pizzas-operations';
 
 const initialState = {
   filter: '',
@@ -33,9 +34,11 @@ export const filterSlice = createSlice({
     clearPage: state => {
       state.page = initialState.page;
     },
-    setPageCount: (state, action) => {
-      state.pageCount = action.payload;
-    },
+  },
+  extraReducers: builder => {
+    builder.addCase(fetchPizzasByCategory.fulfilled, (state, action) => {
+      state.pageCount = Math.ceil(action.payload.length / 6);
+    });
   },
 });
 
