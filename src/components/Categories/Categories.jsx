@@ -1,7 +1,7 @@
 // redux
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCategoryId } from 'redux/slices/selectors';
-import { setCategoryId } from 'redux/slices/filterSlice';
+import { setCategoryId, clearPage } from 'redux/slices/filterSlice';
 
 // constants
 import { categoryOptions } from 'constants/categoryOptions';
@@ -9,7 +9,7 @@ import { categoryOptions } from 'constants/categoryOptions';
 // styles
 import { CategoryList, CategoryButton } from './Categories.styled';
 
-const Categories = ({ clearPage }) => {
+const Categories = () => {
   const dispatch = useDispatch();
   const categoryId = useSelector(selectCategoryId);
 
@@ -20,7 +20,7 @@ const Categories = ({ clearPage }) => {
           <CategoryButton
             onClick={() => {
               dispatch(setCategoryId(index));
-              clearPage();
+              dispatch(clearPage());
             }}
             className={categoryId === index ? 'active' : ''}
           >

@@ -1,29 +1,29 @@
+//redux
+import { useSelector } from 'react-redux';
+import { selectCategoryId, selectPizzas } from 'redux/slices/selectors';
+
 // components
 import PizzaItem from 'components/PizzaItem/PizzaItem';
 import Skeleton from 'components/Skeleton/Skeleto';
 
+import { categoryOptions } from 'constants/categoryOptions';
+
 // styles
 import { PizzaTitle, PizzaGallery } from './PizzaList.styled';
 
-const options = [
-  'Всі',
-  'Самий ТОП',
-  "М'ясні",
-  'Вегетаріанські',
-  'Гострі',
-  'Спецпропозиції',
-];
+const PizzaList = ({ isLoading }) => {
+  const categoryId = useSelector(selectCategoryId);
+  const items = useSelector(selectPizzas);
 
-const PizzaList = ({ items, isLoading, categoryId }) => {
   const pizzas = items.map(item => <PizzaItem item={item} key={item.id} />);
 
-  const skeletons = [...new Array(10)].map((_, index) => (
+  const skeletons = [...new Array(6)].map((_, index) => (
     <Skeleton key={index} />
   ));
 
   return (
     <>
-      <PizzaTitle>{options[categoryId]}</PizzaTitle>
+      <PizzaTitle>{categoryOptions[categoryId]}</PizzaTitle>
 
       <PizzaGallery>{isLoading ? skeletons : pizzas}</PizzaGallery>
     </>

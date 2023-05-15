@@ -2,6 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   filter: '',
+  page: 1,
+  pageCount: 1,
   categoryId: 0,
   sort: {
     name: 'популярності',
@@ -17,13 +19,22 @@ export const filterSlice = createSlice({
       state.filter = action.payload;
     },
     clearFilterValue: state => {
-      state.filter = '';
+      state.filter = initialState.filter;
     },
     setCategoryId: (state, action) => {
       state.categoryId = action.payload;
     },
     setSortType: (state, action) => {
       state.sort = action.payload;
+    },
+    setPage: (state, action) => {
+      state.page = action.payload;
+    },
+    clearPage: state => {
+      state.page = initialState.page;
+    },
+    setPageCount: (state, action) => {
+      state.pageCount = action.payload;
     },
   },
 });
@@ -33,6 +44,9 @@ export const {
   clearFilterValue,
   setCategoryId,
   setSortType,
+  setPage,
+  clearPage,
+  setPageCount,
 } = filterSlice.actions;
 
 export const filterReducer = filterSlice.reducer;

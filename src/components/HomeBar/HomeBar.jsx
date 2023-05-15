@@ -8,7 +8,7 @@ import { HomeBarWrapper } from './HomeBar.styled';
 const Homebar = ({ clearPage }) => {
   return (
     <HomeBarWrapper>
-      <Categories clearPage={clearPage} />
+      <Categories />
       <Sort />
     </HomeBarWrapper>
   );

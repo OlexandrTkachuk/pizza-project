@@ -1,13 +1,18 @@
 // system
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 // redux
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import {
   selectCategoryId,
   selectFilter,
   selectSortType,
+  selectPage,
+  selectIsLoading,
 } from 'redux/slices/selectors';
+
+import { setPageCount } from 'redux/slices/filterSlice';
+import { setPizzasItems } from 'redux/slices/pizzasSlice';
 
 // components
 import Homebar from 'components/HomeBar/HomeBar';
@@ -15,23 +20,21 @@ import PizzaList from 'components/PizzaList/PizzaList';
 import Pagination from 'components/Pagination/Pagination';
 
 const Home = () => {
+  const dispatch = useDispatch();
+
   const searchValue = useSelector(selectFilter);
   const categoryId = useSelector(selectCategoryId);
   const sortType = useSelector(selectSortType);
-
-  const [items, setItems] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  const [page, setPage] = useState(1);
-  const [pageCount, setPageCount] = useState(0);
+  const page = useSelector(selectPage);
+  const isLoading = useSelector(selectIsLoading);
 
   useEffect(() => {
     const category = categoryId > 0 ? `category=${categoryId}` : '';
 
     fetch(`https://645604705f9a4f236138e078.mockapi.io/items?${category}&`)
       .then(res => res.json())
-      .then(data => setPageCount(Math.ceil(data.length / 6)));
-  }, [categoryId]);
+      .then(data => dispatch(setPageCount(Math.ceil(data.length / 6))));
+  }, [categoryId, dispatch]);
 
   useEffect(() => {
     const category = categoryId > 0 ? `category=${categoryId}` : '';
@@ -44,30 +47,20 @@ const Home = () => {
     )
       .then(res => res.json())
       .then(data => {
-        setItems(data);
-        setIsLoading(false);
+        dispatch(setPizzasItems(data));
       })
       .catch(error => {
         throw new Error(error);
       });
-  }, [categoryId, page, searchValue, sortType]);
-
-  const handlePage = index => {
-    setPage(index + 1);
-    window.scrollTo(0, 0);
-  };
-
-  const clearPage = () => {
-    setPage(1);
-  };
+  }, [categoryId, dispatch, page, searchValue, sortType]);
 
   return (
     <>
-      <Homebar clearPage={clearPage} />
+      <Homebar />
 
-      <PizzaList items={items} isLoading={isLoading} categoryId={categoryId} />
+      <PizzaList isLoading={isLoading} />
 
-      <Pagination onPage={handlePage} pageCount={pageCount} />
+      <Pagination />
     </>
   );
 };
