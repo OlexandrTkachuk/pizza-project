@@ -1,23 +1,25 @@
+// redux
+import { useDispatch, useSelector } from 'react-redux';
+import { selectCategoryId } from 'redux/slices/selectors';
+import { setCategoryId } from 'redux/slices/filterSlice';
+
+// constants
+import { categoryOptions } from 'constants/categoryOptions';
+
 // styles
 import { CategoryList, CategoryButton } from './Categories.styled';
 
-const options = [
-  'Всі',
-  'Самий ТОП',
-  "М'ясні",
-  'Вегетаріанські',
-  'Гострі',
-  'Спецпропозиції',
-];
+const Categories = ({ clearPage }) => {
+  const dispatch = useDispatch();
+  const categoryId = useSelector(selectCategoryId);
 
-const Categories = ({ categoryId, onCategoryClick, clearPage }) => {
   return (
     <CategoryList>
-      {options.map((option, index) => (
+      {categoryOptions.map((option, index) => (
         <li key={index}>
           <CategoryButton
             onClick={() => {
-              onCategoryClick(index);
+              dispatch(setCategoryId(index));
               clearPage();
             }}
             className={categoryId === index ? 'active' : ''}

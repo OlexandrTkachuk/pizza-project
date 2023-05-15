@@ -1,6 +1,14 @@
 // system
 import { useState } from 'react';
 
+// redux
+import { useDispatch, useSelector } from 'react-redux';
+import { selectSortType } from 'redux/slices/selectors';
+import { setSortType } from 'redux/slices/filterSlice';
+
+// constants
+import { sortOptions } from 'constants/sortOptions';
+
 // styles
 import {
   SortWrapper,
@@ -15,19 +23,15 @@ import {
   SortTextWrapper,
 } from './Sort.styled';
 
-const popupOptions = [
-  { name: 'популярності', value: 'rating' },
-  { name: 'ціні ⬇', value: '-price' },
-  { name: 'ціні ⬆', value: 'price' },
-  { name: 'алфавіту', value: 'title' },
-];
-
-const Sort = ({ onSortTypeClick, selectedSortType }) => {
+const Sort = () => {
+  const dispatch = useDispatch();
+  const sort = useSelector(selectSortType);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const switchSortMenu = () => setIsMenuOpen(prev => !prev);
-  const handleOption = index => {
-    onSortTypeClick(index);
+
+  const handleOption = value => {
+    dispatch(setSortType(value));
     setIsMenuOpen(prev => !prev);
   };
 
@@ -42,22 +46,18 @@ const Sort = ({ onSortTypeClick, selectedSortType }) => {
 
         <SortTextWrapper>
           <SortLabelBoldText>Сотрування за:</SortLabelBoldText>
-          <SortLabelText onClick={switchSortMenu}>
-            {selectedSortType.name}
-          </SortLabelText>
+          <SortLabelText onClick={switchSortMenu}>{sort.name}</SortLabelText>
         </SortTextWrapper>
       </SortLabel>
 
       {isMenuOpen && (
         <SortPopup>
           <SortPopupList>
-            {popupOptions.map((option, index) => (
+            {sortOptions.map((option, index) => (
               <SortPopupItem
                 key={index}
                 onClick={() => handleOption(option)}
-                className={
-                  selectedSortType.name === option.name ? 'active' : ''
-                }
+                className={sort.name === option.name ? 'active' : ''}
               >
                 {option.name}
               </SortPopupItem>

@@ -5,24 +5,11 @@ import Sort from 'components/Sort/Sort';
 // styles
 import { HomeBarWrapper } from './HomeBar.styled';
 
-const Homebar = ({
-  categoryId,
-  selectedSortType,
-  onCategoryClick,
-  onSortTypeClick,
-  clearPage,
-}) => {
+const Homebar = ({ clearPage }) => {
   return (
     <HomeBarWrapper>
-      <Categories
-        categoryId={categoryId}
-        onCategoryClick={onCategoryClick}
-        clearPage={clearPage}
-      />
-      <Sort
-        selectedSortType={selectedSortType}
-        onSortTypeClick={onSortTypeClick}
-      />
+      <Categories clearPage={clearPage} />
+      <Sort />
     </HomeBarWrapper>
   );
 };

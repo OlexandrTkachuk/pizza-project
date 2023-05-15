@@ -1,29 +1,29 @@
-import { useContext } from 'react';
+// redux
+import { useSelector, useDispatch } from 'react-redux';
+import { changeFilterValue, clearFilterValue } from 'redux/slices/filterSlice';
+import { selectFilter } from 'redux/slices/selectors';
+
+// styles
 import { CloseIcon, Input, SearchIcon, SearchWrapper } from './Search.styled';
-import { SearchContext } from 'App';
 
 const Search = () => {
-  const { searchValue, setSearchValue } = useContext(SearchContext);
-
-  const handleInputChange = event => {
-    setSearchValue(event.target.value);
-  };
-
-  const clearInput = () => {
-    setSearchValue('');
-  };
+  const dispatch = useDispatch();
+  const filter = useSelector(selectFilter);
 
   return (
     <SearchWrapper>
       <Input
         type="text"
         placeholder="Введіть назву піци"
-        onChange={handleInputChange}
-        value={searchValue}
+        onChange={event => dispatch(changeFilterValue(event.target.value))}
+        value={filter}
         autoComplete="on"
       />
-      {searchValue !== '' && (
-        <CloseIcon onClick={clearInput} primary={searchValue} />
+      {filter !== '' && (
+        <CloseIcon
+          onClick={() => dispatch(clearFilterValue())}
+          primary={filter}
+        />
       )}
       <SearchIcon />
     </SearchWrapper>
