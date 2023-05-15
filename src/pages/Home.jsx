@@ -29,9 +29,12 @@ const Home = () => {
 
   useEffect(() => {
     const category = categoryId > 0 ? `category=${categoryId}` : '';
+    const order = sortType.value.includes('-') ? 'order=desc' : 'order=asc';
+    const sortBy = sortType.value.replace('-', '');
+    const search = searchValue ? `search=${searchValue}` : '';
 
-    dispatch(fetchPizzasByCategory(category));
-  }, [categoryId, dispatch]);
+    dispatch(fetchPizzasByCategory({ category, order, sortBy, search }));
+  }, [categoryId, dispatch, searchValue, sortType.value]);
 
   useEffect(() => {
     const category = categoryId > 0 ? `category=${categoryId}` : '';

@@ -16,18 +16,22 @@ export const filterSlice = createSlice({
   name: 'filter',
   initialState,
   reducers: {
+    // search value
     changeFilterValue: (state, action) => {
       state.filter = action.payload;
     },
     clearFilterValue: state => {
       state.filter = initialState.filter;
     },
+    // category
     setCategoryId: (state, action) => {
       state.categoryId = action.payload;
     },
+    // sort
     setSortType: (state, action) => {
       state.sort = action.payload;
     },
+    // page
     setPage: (state, action) => {
       state.page = action.payload;
     },

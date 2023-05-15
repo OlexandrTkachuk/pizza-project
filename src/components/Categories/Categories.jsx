@@ -13,15 +13,17 @@ const Categories = () => {
   const dispatch = useDispatch();
   const categoryId = useSelector(selectCategoryId);
 
+  const handleCategory = index => {
+    dispatch(setCategoryId(index));
+    dispatch(clearPage());
+  };
+
   return (
     <CategoryList>
       {categoryOptions.map((option, index) => (
         <li key={index}>
           <CategoryButton
-            onClick={() => {
-              dispatch(setCategoryId(index));
-              dispatch(clearPage());
-            }}
+            onClick={() => handleCategory(index)}
             className={categoryId === index ? 'active' : ''}
           >
             {option}

@@ -20,9 +20,11 @@ export const fetchPizzas = createAsyncThunk(
 
 export const fetchPizzasByCategory = createAsyncThunk(
   'pizzas/fetchByCategory',
-  async (category, thunkAPI) => {
+  async ({ category, order, sortBy, search }, thunkAPI) => {
     try {
-      const { data } = await axios.get(`/items?${category}`);
+      const { data } = await axios.get(
+        `/items?${category}&sortBy=${sortBy}&${order}&${search}`
+      );
 
       return data;
     } catch (error) {
