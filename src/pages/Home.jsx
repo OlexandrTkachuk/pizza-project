@@ -1,5 +1,7 @@
 // system
 import { useEffect } from 'react';
+import QueryString from 'qs';
+import { useNavigate } from 'react-router-dom';
 
 // redux
 import { useSelector, useDispatch } from 'react-redux';
@@ -21,6 +23,7 @@ import {
 
 const Home = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const searchValue = useSelector(selectFilter);
   const categoryId = useSelector(selectCategoryId);
@@ -34,7 +37,7 @@ const Home = () => {
     const search = searchValue ? `search=${searchValue}` : '';
 
     dispatch(fetchPizzasByCategory({ category, order, sortBy, search }));
-  }, [categoryId, dispatch, searchValue, sortType.value]);
+  }, [categoryId, dispatch, searchValue, sortType]);
 
   useEffect(() => {
     const category = categoryId > 0 ? `category=${categoryId}` : '';
@@ -44,6 +47,16 @@ const Home = () => {
 
     dispatch(fetchPizzas({ category, page, order, sortBy, search }));
   }, [categoryId, dispatch, page, searchValue, sortType]);
+
+  useEffect(() => {
+    const queryString = QueryString.stringify({
+      page,
+      categoryId,
+      sort: sortType.value,
+    });
+
+    navigate(`?${queryString}`);
+  }, [categoryId, navigate, page, sortType]);
 
   return (
     <>

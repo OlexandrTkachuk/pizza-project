@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 // redux
 import { useDispatch } from 'react-redux';
-import { setPage } from 'redux/slices/filterSlice';
+import { clearHomePage } from 'redux/slices/filterSlice';
 
 // components
 import Search from 'components/Search/Search';
@@ -31,7 +31,7 @@ const Header = () => {
   const dispatch = useDispatch();
 
   const handleLogoClick = () => {
-    dispatch(setPage(1));
+    dispatch(clearHomePage());
   };
 
   return (
