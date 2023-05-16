@@ -20,9 +20,6 @@ export const filterSlice = createSlice({
     changeFilterValue: (state, action) => {
       state.filter = action.payload;
     },
-    clearFilterValue: state => {
-      state.filter = initialState.filter;
-    },
     // category
     setCategoryId: (state, action) => {
       state.categoryId = action.payload;
@@ -48,7 +45,6 @@ export const filterSlice = createSlice({
 
 export const {
   changeFilterValue,
-  clearFilterValue,
   setCategoryId,
   setSortType,
   setPage,

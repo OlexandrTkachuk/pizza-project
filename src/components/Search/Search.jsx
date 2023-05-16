@@ -1,29 +1,51 @@
 // redux
-import { useSelector, useDispatch } from 'react-redux';
-import { changeFilterValue, clearFilterValue } from 'redux/slices/filterSlice';
-import { selectFilter } from 'redux/slices/selectors';
+import { useRef, useState, useCallback } from 'react';
+import { useDispatch } from 'react-redux';
+import { changeFilterValue } from 'redux/slices/filterSlice';
+import debounce from 'lodash.debounce';
 
 // styles
 import { CloseIcon, Input, SearchIcon, SearchWrapper } from './Search.styled';
 
 const Search = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(selectFilter);
+  const [inputValue, setInputValue] = useState('');
+  const inputRef = useRef();
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const updateFilterValue = useCallback(
+    debounce(value => {
+      dispatch(changeFilterValue(value));
+    }, 700),
+    []
+  );
+
+  const handleChange = event => {
+    const value = event.target.value;
+    setInputValue(value);
+    updateFilterValue(value);
+  };
+
+  const handleClearClick = () => {
+    setInputValue('');
+    dispatch(changeFilterValue(''));
+    inputRef.current.focus();
+  };
 
   return (
     <SearchWrapper>
       <Input
         type="text"
+        maxLength={12}
         placeholder="Введіть назву піци"
-        onChange={event => dispatch(changeFilterValue(event.target.value))}
-        value={filter}
+        onChange={handleChange}
+        value={inputValue}
         autoComplete="on"
+        ref={inputRef}
+        name="search"
       />
-      {filter !== '' && (
-        <CloseIcon
-          onClick={() => dispatch(clearFilterValue())}
-          primary={filter}
-        />
+      {inputValue !== '' && (
+        <CloseIcon onClick={handleClearClick} primary={inputValue} />
       )}
       <SearchIcon />
     </SearchWrapper>
