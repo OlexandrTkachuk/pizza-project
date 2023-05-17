@@ -39,6 +39,7 @@ export const filterSlice = createSlice({
       state.categoryId = initialState.categoryId;
       state.page = initialState.page;
       state.sort = initialState.sort;
+      state.filter = initialState.filter;
     },
   },
   extraReducers: builder => {

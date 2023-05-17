@@ -44,3 +44,9 @@ export const PizzaGallery = styled.ul`
     justify-content: start;
   }
 `;
+
+export const NotFoundGif = styled.img`
+  width: 300px;
+  margin: 40px auto 0;
+  /* height: 300px; */
+`;

@@ -1,8 +1,8 @@
 // system
 import { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { useState } from 'react';
-import { createContext } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // components
 import Header from 'components/Header/Header';
@@ -18,26 +18,33 @@ const HomePage = lazy(() => import('./pages/Home'));
 const CartPage = lazy(() => import('./pages/Cart'));
 const NotFoundPage = lazy(() => import('./pages/NotFound'));
 
-export const SearchContext = createContext(null);
-
 const App = () => {
-  const [searchValue, setSearchValue] = useState('');
-
   return (
     <Container>
-      <SearchContext.Provider value={{ searchValue, setSearchValue }}>
-        <ScrollToTop />
+      <ScrollToTop />
 
-        <Header />
+      <Header />
 
-        <Suspense fallback="Loading...">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/cart" element={<CartPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-        </Suspense>
-      </SearchContext.Provider>
+      <Suspense fallback="Loading...">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </Container>
   );
 };
