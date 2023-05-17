@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
-import { NavLink } from 'react-router-dom';
+
+
 
 export const Card = styled.div`
   position: relative;
@@ -77,7 +78,7 @@ export const Card = styled.div`
   &:hover .StyledLink {
     opacity: 1;
     transform: translateY(0px);
-    transition-delay: 0.75s;
+    transition-delay: 0.6s;
   }
 
   &:hover .SizeWrapper {
@@ -154,7 +155,7 @@ export const SubTitle = styled.div`
   font-size: 16px;
 `;
 
-export const SizeSpan = styled.span`
+export const SizeSpan = styled.li`
   padding: 4px 12px;
   height: 26px;
   text-align: center;
@@ -173,6 +174,14 @@ export const SizeSpan = styled.span`
   &:hover {
     background-color: #6c3c1579;
     color: #fff;
+  }
+
+  &.active {
+    background-color: #6c3c1579;
+    color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 5px;
+    cursor: auto;
   }
 `;
 
@@ -193,19 +202,23 @@ export const ColorSpan = styled.span`
     background-color: #6c3c1579;
     color: #fff;
   }
+
+  &.active {
+    background-color: #6c3c1579;
+    color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 5px;
+    cursor: auto;
+  }
 `;
 
-export const StyledLink = styled(NavLink)`
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #fff;
+export const AddButton = styled.button`
+  display: flex;
+  padding: 10px 24px;
+  gap: 8px;
   border-radius: 12px;
   text-decoration: none;
-  font-weight: 600;
-  color: #111;
   transition: 0.5s;
-
-  padding: 6px 24px;
   background: #ffffff;
   border: 1px solid #bc7a2e;
   color: #bc7a2e;

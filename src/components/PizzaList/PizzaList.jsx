@@ -8,7 +8,7 @@ import {
 } from 'redux/slices/selectors';
 
 // components
-import PizzaItem from 'components/PizzaItem/PizzaItem';
+import MagicItem from 'components/MagicItem/MagicItem';
 import Skeleton from 'components/Skeleton/Skeleto';
 
 // constants
@@ -38,7 +38,7 @@ const PizzaList = () => {
 
   const isFilter = searchValue === '' ? items : filteredItems;
 
-  const pizzas = isFilter.map(item => <PizzaItem item={item} key={item.id} />);
+  const pizzas = isFilter.map(item => <MagicItem item={item} key={item.id} />);
 
   return (
     <>
