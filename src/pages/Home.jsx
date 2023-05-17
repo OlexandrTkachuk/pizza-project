@@ -9,7 +9,7 @@ import {
   selectCategoryId,
   selectSortType,
   selectPage,
-  selectFilter,
+  // selectFilter,
 } from 'redux/slices/selectors';
 import {
   fetchPizzas,
@@ -18,8 +18,9 @@ import {
 
 // components
 import Homebar from 'components/HomeBar/HomeBar';
-import PizzaList from 'components/PizzaList/PizzaList';
-import Pagination from 'components/Pagination/Pagination';
+// import PizzaList from 'components/PizzaList/PizzaList';
+// import Pagination from 'components/Pagination/Pagination';
+import MagicItem from 'components/MagicItem/MagicItem';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -28,7 +29,7 @@ const Home = () => {
   const categoryId = useSelector(selectCategoryId);
   const sortType = useSelector(selectSortType);
   const page = useSelector(selectPage);
-  const searchValue = useSelector(selectFilter);
+  // const searchValue = useSelector(selectFilter);
 
   useEffect(() => {
     const category = categoryId > 0 ? `category=${categoryId}` : '';
@@ -60,9 +61,11 @@ const Home = () => {
     <>
       <Homebar />
 
-      <PizzaList />
+      {/* <PizzaList />
 
-      {!searchValue && <Pagination />}
+      {!searchValue && <Pagination />} */}
+
+      <MagicItem />
     </>
   );
 };

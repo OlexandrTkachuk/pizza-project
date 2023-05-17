@@ -48,5 +48,6 @@ export const PizzaGallery = styled.ul`
 export const NotFoundGif = styled.img`
   width: 300px;
   margin: 40px auto 0;
+  border-radius: 8px;
   /* height: 300px; */
 `;
