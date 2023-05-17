@@ -1,7 +1,5 @@
 import styled from '@emotion/styled';
 
-
-
 export const Card = styled.div`
   position: relative;
   width: 280px;
@@ -100,6 +98,18 @@ export const Card = styled.div`
   & .ColorWrapper {
     display: flex;
     flex-direction: row;
+  }
+
+  & .Ingredients {
+    bottom: 100px;
+    opacity: 1;
+    transform: translateY(50px);
+  }
+
+  &:hover .Ingredients {
+    opacity: 0;
+    transform: translateY(550px);
+    transition-delay: 0.3s;
   }
 `;
 
@@ -252,4 +262,11 @@ export const ButtonWrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 16px;
+`;
+
+export const Ingredient = styled.p`
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  padding: 8px 20px;
 `;

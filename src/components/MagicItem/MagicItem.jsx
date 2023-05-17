@@ -8,6 +8,7 @@ import {
   Image,
   ImageBox,
   InfoWrapper,
+  Ingredient,
   PriceText,
   SizeSpan,
   SubTitle,
@@ -16,7 +17,7 @@ import {
 import { typeOptions } from 'constants/typeOptions';
 
 const MagicItem = ({ item }) => {
-  const { imageUrl, title, types, sizes, price } = item;
+  const { imageUrl, title, types, sizes, price, ingredients } = item;
   const [count, setCount] = useState(0);
   const [sizeActiveIndex, setSizeActiveIndex] = useState(0);
   const [typeActiveIndex, setTypeActiveIndex] = useState(0);
@@ -89,6 +90,8 @@ const MagicItem = ({ item }) => {
           </AddButton>
         </ButtonWrapper>
       </ContentBox>
+
+      <Ingredient className="Ingredients">{ingredients}</Ingredient>
     </Card>
   );
 };
