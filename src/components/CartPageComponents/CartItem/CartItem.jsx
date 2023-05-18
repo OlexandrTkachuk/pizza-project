@@ -1,6 +1,5 @@
 // system
-import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { deleteCartItem } from 'redux/slices/cartItemsSlice';
 
 // constants
@@ -22,19 +21,10 @@ import {
   PlusIcon,
   PriceWrapper,
 } from './CartItem.styled';
-import { selectCartItems } from 'redux/slices/selectors';
 
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();
-  const cartItems = useSelector(selectCartItems);
   const { imageUrl, title, price, id, type, size, count } = item;
-
-  // const handleIncrement = () => setCount(prev => prev + 1);
-  // const handleDecrement = () => {
-  //   if (count > 1) {
-  //     setCount(prev => prev - 1);
-  //   }
-  // };
 
   const handleFullPrice = () => {
     if (size === 30) {
