@@ -1,5 +1,5 @@
 // system
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 // redux
 import { useDispatch, useSelector } from 'react-redux';
@@ -27,6 +27,7 @@ const Sort = () => {
   const dispatch = useDispatch();
   const sort = useSelector(selectSortType);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const sortRef = useRef(null);
 
   const switchSortMenu = () => setIsMenuOpen(prev => !prev);
 
@@ -35,8 +36,24 @@ const Sort = () => {
     setIsMenuOpen(prev => !prev);
   };
 
+  const handleOutsideClick = event => {
+    const path = event.composedPath();
+
+    if (!path.includes(sortRef.current)) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.body.addEventListener('click', handleOutsideClick);
+
+    return () => {
+      document.body.removeEventListener('click', handleOutsideClick);
+    };
+  }, []);
+
   return (
-    <SortWrapper>
+    <SortWrapper ref={sortRef}>
       <SortLabel>
         {!isMenuOpen ? (
           <SortLabelIconDown onClick={switchSortMenu} />
