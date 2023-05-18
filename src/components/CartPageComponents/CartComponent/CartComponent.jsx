@@ -1,5 +1,6 @@
-// system
-import { useState, useEffect } from 'react';
+// redux
+import { useSelector } from 'react-redux';
+import { selectCartItems } from 'redux/slices/selectors';
 
 // components
 import CartItem from '../CartItem/CartItem';
@@ -28,15 +29,7 @@ import {
 import { IoIosArrowBack } from 'react-icons/io';
 
 const CartComponent = () => {
-  const [items, setItems] = useState([]);
-
-  useEffect(() => {
-    fetch('https://645604705f9a4f236138e078.mockapi.io/items')
-      .then(res => res.json())
-      .then(data => {
-        setItems(data);
-      });
-  }, []);
+  const cartItems = useSelector(selectCartItems);
 
   return (
     <Container>
@@ -53,7 +46,7 @@ const CartComponent = () => {
       </TopBlockWrapper>
 
       <CartList>
-        {items.map(item => (
+        {cartItems.map(item => (
           <CartItem item={item} key={item.id} />
         ))}
       </CartList>

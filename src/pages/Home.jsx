@@ -1,7 +1,7 @@
 // system
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import QueryString from 'qs';
+import queryString from 'query-string';
 
 // redux
 import { useSelector, useDispatch } from 'react-redux';
@@ -15,6 +15,7 @@ import {
   fetchPizzas,
   fetchPizzasByCategory,
 } from 'redux/slices/pizzas-operations';
+import { setFilters } from 'redux/slices/filterSlice';
 
 // components
 import Homebar from 'components/HomeBar/HomeBar';
@@ -31,6 +32,24 @@ const Home = () => {
   const searchValue = useSelector(selectFilter);
 
   useEffect(() => {
+    if (window.location.search) {
+      const params = queryString.parse(window.location.search.substring(1));
+      console.log(params);
+
+      dispatch(setFilters({ ...params }));
+    }
+  }, [dispatch]);
+
+  useEffect(() => {
+    const queryStr = queryString.stringify({
+      page,
+      categoryId,
+    });
+
+    navigate(`?${queryStr}`);
+  }, [categoryId, navigate, page]);
+
+  useEffect(() => {
     const category = categoryId > 0 ? `category=${categoryId}` : '';
     const order = sortType.value.includes('-') ? 'order=desc' : 'order=asc';
     const sortBy = sortType.value.replace('-', '');
@@ -45,16 +64,6 @@ const Home = () => {
 
     dispatch(fetchPizzas({ category, page, order, sortBy }));
   }, [categoryId, dispatch, page, sortType]);
-
-  useEffect(() => {
-    const queryString = QueryString.stringify({
-      page,
-      categoryId,
-      sort: sortType.value,
-    });
-
-    navigate(`?${queryString}`);
-  }, [categoryId, navigate, page, sortType]);
 
   return (
     <>

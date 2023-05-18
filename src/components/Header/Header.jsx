@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 
 // redux
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { clearHomePage } from 'redux/slices/filterSlice';
 
 // components
@@ -26,9 +26,14 @@ import {
 
 // images
 import logo from '../../assets/logo.png';
+import { selectCartItems } from 'redux/slices/selectors';
 
 const Header = () => {
   const dispatch = useDispatch();
+  const cartItems = useSelector(selectCartItems);
+
+  const totalCount = cartItems.reduce((acc, item) => acc + item.count, 0);
+  const totalPrice = cartItems.reduce((acc, item) => acc + item.price, 0);
 
   const handleLogoClick = () => {
     dispatch(clearHomePage());
@@ -57,12 +62,12 @@ const Header = () => {
         <Search />
 
         <CartWrapper to="/cart">
-          <CartText>520 грн.</CartText>
+          <CartText>{totalPrice} грн.</CartText>
 
           <ButtonDelimiter />
 
           <CartIcon />
-          <CartText>3</CartText>
+          <CartText>{totalCount}</CartText>
         </CartWrapper>
       </Container>
     </HeaderWrapper>

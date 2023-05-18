@@ -15,3 +15,6 @@ export const selectPageCount = state => state.filter.pageCount;
 export const selectPizzas = state => state.pizzas.items;
 export const selectIsLoading = state => state.pizzas.isLoading;
 export const selectError = state => state.pizzas.error;
+
+// cart items
+export const selectCartItems = state => state.cartItems.cartItems;

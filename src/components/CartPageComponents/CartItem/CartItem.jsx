@@ -1,5 +1,10 @@
 // system
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteCartItem } from 'redux/slices/cartItemsSlice';
+
+// constants
+import { typeOptions } from 'constants/typeOptions';
 
 // styles
 import {
@@ -17,15 +22,27 @@ import {
   PlusIcon,
   PriceWrapper,
 } from './CartItem.styled';
+import { selectCartItems } from 'redux/slices/selectors';
 
 const CartItem = ({ item }) => {
-  const [count, setCount] = useState(1);
-  const { imageUrl, title, price } = item;
+  const dispatch = useDispatch();
+  const cartItems = useSelector(selectCartItems);
+  const { imageUrl, title, price, id, type, size, count } = item;
 
-  const handleIncrement = () => setCount(prev => prev + 1);
-  const handleDecrement = () => {
-    if (count > 1) {
-      setCount(prev => prev - 1);
+  // const handleIncrement = () => setCount(prev => prev + 1);
+  // const handleDecrement = () => {
+  //   if (count > 1) {
+  //     setCount(prev => prev - 1);
+  //   }
+  // };
+
+  const handleFullPrice = () => {
+    if (size === 30) {
+      return `${Math.round(price * 1.35) * count}`;
+    } else if (size === 40) {
+      return `${Math.round(price * 1.65) * count}`;
+    } else {
+      return `${price * 1 * count}`;
     }
   };
 
@@ -36,7 +53,9 @@ const CartItem = ({ item }) => {
 
         <CartItemDesc>
           <CartItemTitle>{title}</CartItemTitle>
-          <CartItemText>тонкое тесто, 26 см.</CartItemText>
+          <CartItemText>
+            {typeOptions[type]} тесто, {size} см.
+          </CartItemText>
         </CartItemDesc>
       </CartWrapper>
 
@@ -45,15 +64,19 @@ const CartItem = ({ item }) => {
           <MinusIcon
             size={32}
             color={count > 1 ? '#FE5F1E' : '#D7D7D7'}
-            onClick={handleDecrement}
+            onClick={() => {}}
           />
           <CountText>{count}</CountText>
-          <PlusIcon size={32} color="#FE5F1E" onClick={handleIncrement} />
+          <PlusIcon size={32} color="#FE5F1E" onClick={() => {}} />
         </CountWrapper>
 
-        <CartPriceText>{count * price}</CartPriceText>
+        <CartPriceText>{handleFullPrice()}</CartPriceText>
 
-        <DeleteIcon size={32} color="#D7D7D7" />
+        <DeleteIcon
+          size={32}
+          color="#D7D7D7"
+          onClick={() => dispatch(deleteCartItem(id))}
+        />
       </PriceWrapper>
     </CartItemWrapper>
   );

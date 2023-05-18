@@ -1,4 +1,8 @@
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { typeOptions } from 'constants/typeOptions';
+import { addCartItem } from 'redux/slices/cartItemsSlice';
+import { selectCartItems } from 'redux/slices/selectors';
 import {
   AddButton,
   ButtonWrapper,
@@ -14,10 +18,13 @@ import {
   SubTitle,
   Title,
 } from './MagicItem.styled';
-import { typeOptions } from 'constants/typeOptions';
 
 const MagicItem = ({ item }) => {
-  const { imageUrl, title, types, sizes, price, ingredients } = item;
+  const dispatch = useDispatch();
+
+  const { imageUrl, title, types, sizes, price, ingredients, id } = item;
+  const cartItems = useSelector(selectCartItems);
+
   const [count, setCount] = useState(0);
   const [sizeActiveIndex, setSizeActiveIndex] = useState(0);
   const [typeActiveIndex, setTypeActiveIndex] = useState(0);
@@ -33,6 +40,34 @@ const MagicItem = ({ item }) => {
       return `${Math.round(price * 1.65)}`;
     } else {
       return `${price * 1}`;
+    }
+  };
+
+  const handleAddItem = () => {
+    handleCountIncrement();
+
+    const cartItem = {
+      id,
+      imageUrl,
+      title,
+      price,
+      count: count + 1,
+      type: types[typeActiveIndex],
+      size: sizes[sizeActiveIndex],
+    };
+
+    const alreadyExists = cartItems.findIndex(item => {
+      const name = item.title.toLowerCase();
+      const newName = cartItem.title.toLowerCase();
+      return name === newName;
+    });
+
+    if (alreadyExists >= 0) {
+      cartItem.count = count + 1;
+      console.log(cartItem.count);
+      return;
+    } else {
+      dispatch(addCartItem(cartItem));
     }
   };
 
@@ -84,7 +119,7 @@ const MagicItem = ({ item }) => {
         <ButtonWrapper className="StyledLink">
           <PriceText>{handleFullPrice()} грн.</PriceText>
 
-          <AddButton onClick={handleCountIncrement}>
+          <AddButton onClick={handleAddItem}>
             <p> Додати</p>
             <i>{count > 0 ? count : ' '}</i>
           </AddButton>
