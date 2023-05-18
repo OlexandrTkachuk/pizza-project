@@ -1,25 +1,26 @@
 {
   "files": {
     "main.css": "/pizza-project/static/css/main.625e5daa.css",
-    "main.js": "/pizza-project/static/js/main.00470b6c.js",
-    "static/js/244.c8871d08.chunk.js": "/pizza-project/static/js/244.c8871d08.chunk.js",
-    "static/js/259.775f6f11.chunk.js": "/pizza-project/static/js/259.775f6f11.chunk.js",
+    "main.js": "/pizza-project/static/js/main.b466d285.js",
+    "static/js/395.03e6a405.chunk.js": "/pizza-project/static/js/395.03e6a405.chunk.js",
+    "static/js/57.9be08ecf.chunk.js": "/pizza-project/static/js/57.9be08ecf.chunk.js",
     "static/js/684.a9d196b6.chunk.js": "/pizza-project/static/js/684.a9d196b6.chunk.js",
-    "static/js/810.807238e2.chunk.js": "/pizza-project/static/js/810.807238e2.chunk.js",
+    "static/js/991.3cfda181.chunk.js": "/pizza-project/static/js/991.3cfda181.chunk.js",
     "static/js/760.e5d30aef.chunk.js": "/pizza-project/static/js/760.e5d30aef.chunk.js",
     "static/media/logo.png": "/pizza-project/static/media/logo.34cb00cf6385bac6fb83.png",
     "static/media/notfoundgif.gif": "/pizza-project/static/media/notfoundgif.4552123f95ce11352f89.gif",
+    "static/media/emptyBasket.png": "/pizza-project/static/media/emptyBasket.4ea49652c9d0d8b40c39.png",
     "index.html": "/pizza-project/index.html",
     "main.625e5daa.css.map": "/pizza-project/static/css/main.625e5daa.css.map",
-    "main.00470b6c.js.map": "/pizza-project/static/js/main.00470b6c.js.map",
-    "244.c8871d08.chunk.js.map": "/pizza-project/static/js/244.c8871d08.chunk.js.map",
-    "259.775f6f11.chunk.js.map": "/pizza-project/static/js/259.775f6f11.chunk.js.map",
+    "main.b466d285.js.map": "/pizza-project/static/js/main.b466d285.js.map",
+    "395.03e6a405.chunk.js.map": "/pizza-project/static/js/395.03e6a405.chunk.js.map",
+    "57.9be08ecf.chunk.js.map": "/pizza-project/static/js/57.9be08ecf.chunk.js.map",
     "684.a9d196b6.chunk.js.map": "/pizza-project/static/js/684.a9d196b6.chunk.js.map",
-    "810.807238e2.chunk.js.map": "/pizza-project/static/js/810.807238e2.chunk.js.map",
+    "991.3cfda181.chunk.js.map": "/pizza-project/static/js/991.3cfda181.chunk.js.map",
     "760.e5d30aef.chunk.js.map": "/pizza-project/static/js/760.e5d30aef.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.625e5daa.css",
-    "static/js/main.00470b6c.js"
+    "static/js/main.b466d285.js"
   ]
 }
