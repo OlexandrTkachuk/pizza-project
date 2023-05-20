@@ -1,6 +1,11 @@
 // redux
-import { useSelector } from 'react-redux';
-import { selectCartItems } from 'redux/slices/selectors';
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  selectCartItems,
+  selectTotalCount,
+  selectTotalPrice,
+} from 'redux/slices/selectors';
+import { clearCart } from 'redux/slices/cartItemsSlice';
 
 // components
 import CartItem from '../CartItem/CartItem';
@@ -29,7 +34,10 @@ import {
 import { IoIosArrowBack } from 'react-icons/io';
 
 const CartComponent = () => {
+  const dispatch = useDispatch();
   const cartItems = useSelector(selectCartItems);
+  const totalPrice = useSelector(selectTotalPrice);
+  const totalCount = useSelector(selectTotalCount);
 
   return (
     <Container>
@@ -39,7 +47,7 @@ const CartComponent = () => {
           <Title>Кошик</Title>
         </TopBlockTitle>
 
-        <ButtonTrash>
+        <ButtonTrash onClick={() => dispatch(clearCart())}>
           <TrashIcon />
           <TrashText>очистити кошик</TrashText>
         </ButtonTrash>
@@ -47,19 +55,23 @@ const CartComponent = () => {
 
       <CartList>
         {cartItems.map(item => (
-          <CartItem item={item} key={item.id} />
+          <CartItem item={item} key={`${item.id}${item.size}`} />
         ))}
       </CartList>
 
       <TotalInfoWrapper>
         <TotalInfoText className="totalCount">
           Всього піц:{' '}
-          <span style={{ fontWeight: 700, color: 'black' }}>3 шт.</span>
+          <span style={{ fontWeight: 700, color: 'black' }}>
+            {totalCount} шт.
+          </span>
         </TotalInfoText>
 
         <TotalInfoText className="totalPrice">
           Сума замовлення:{' '}
-          <span style={{ fontWeight: 700, color: '#FE5F1E' }}>900 грн.</span>
+          <span style={{ fontWeight: 700, color: '#FE5F1E' }}>
+            {totalPrice} грн.
+          </span>
         </TotalInfoText>
       </TotalInfoWrapper>
 

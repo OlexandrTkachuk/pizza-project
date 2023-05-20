@@ -18,3 +18,5 @@ export const selectError = state => state.pizzas.error;
 
 // cart items
 export const selectCartItems = state => state.cartItems.cartItems;
+export const selectTotalPrice = state => state.cartItems.totalPrice;
+export const selectTotalCount = state => state.cartItems.totalCount;

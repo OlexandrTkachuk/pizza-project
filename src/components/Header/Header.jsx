@@ -26,14 +26,12 @@ import {
 
 // images
 import logo from '../../assets/logo.png';
-import { selectCartItems } from 'redux/slices/selectors';
+import { selectTotalCount, selectTotalPrice } from 'redux/slices/selectors';
 
 const Header = () => {
   const dispatch = useDispatch();
-  const cartItems = useSelector(selectCartItems);
-
-  const totalCount = cartItems.reduce((acc, item) => acc + item.count, 0);
-  const totalPrice = cartItems.reduce((acc, item) => acc + item.price, 0);
+  const totalPrice = useSelector(selectTotalPrice);
+  const totalCount = useSelector(selectTotalCount);
 
   const handleLogoClick = () => {
     dispatch(clearHomePage());

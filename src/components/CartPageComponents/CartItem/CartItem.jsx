@@ -1,6 +1,10 @@
 // system
 import { useDispatch } from 'react-redux';
-import { deleteCartItem } from 'redux/slices/cartItemsSlice';
+import {
+  countDecrement,
+  countIncrement,
+  deleteCartItem,
+} from 'redux/slices/cartItemsSlice';
 
 // constants
 import { typeOptions } from 'constants/typeOptions';
@@ -36,6 +40,21 @@ const CartItem = ({ item }) => {
     }
   };
 
+  const handleDecrementCount = id => {
+    if (count > 0) {
+      dispatch(countDecrement(id));
+    }
+    if (count === 0) {
+      dispatch(deleteCartItem(id));
+    }
+  };
+
+  const handleIncrement = id => {
+    if (count < 10) {
+      dispatch(countIncrement(id));
+    }
+  };
+
   return (
     <CartItemWrapper>
       <CartWrapper>
@@ -54,10 +73,14 @@ const CartItem = ({ item }) => {
           <MinusIcon
             size={32}
             color={count > 1 ? '#FE5F1E' : '#D7D7D7'}
-            onClick={() => {}}
+            onClick={() => handleDecrementCount(id)}
           />
           <CountText>{count}</CountText>
-          <PlusIcon size={32} color="#FE5F1E" onClick={() => {}} />
+          <PlusIcon
+            size={32}
+            color="#FE5F1E"
+            onClick={() => handleIncrement(id)}
+          />
         </CountWrapper>
 
         <CartPriceText>{handleFullPrice()}</CartPriceText>

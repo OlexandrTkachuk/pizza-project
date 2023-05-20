@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { typeOptions } from 'constants/typeOptions';
 import { addCartItem } from 'redux/slices/cartItemsSlice';
-import { selectCartItems } from 'redux/slices/selectors';
 import {
   AddButton,
   ButtonWrapper,
@@ -23,7 +22,6 @@ const MagicItem = ({ item }) => {
   const dispatch = useDispatch();
 
   const { imageUrl, title, types, sizes, price, ingredients, id } = item;
-  const cartItems = useSelector(selectCartItems);
 
   const [count, setCount] = useState(0);
   const [sizeActiveIndex, setSizeActiveIndex] = useState(0);
@@ -51,24 +49,24 @@ const MagicItem = ({ item }) => {
       imageUrl,
       title,
       price,
-      count: count + 1,
       type: types[typeActiveIndex],
       size: sizes[sizeActiveIndex],
     };
 
-    const alreadyExists = cartItems.findIndex(item => {
-      const name = item.title.toLowerCase();
-      const newName = cartItem.title.toLowerCase();
-      return name === newName;
-    });
+    dispatch(addCartItem(cartItem));
 
-    if (alreadyExists >= 0) {
-      cartItem.count = count + 1;
-      console.log(cartItem.count);
-      return;
-    } else {
-      dispatch(addCartItem(cartItem));
-    }
+    // const alreadyExists = cartItems.findIndex(item => {
+    //   const name = item.title.toLowerCase();
+    //   const newName = cartItem.title.toLowerCase();
+
+    //   return name === newName;
+    // });
+
+    // if (alreadyExists >= 0) {
+    //   return;
+    // } else {
+    //   dispatch(addCartItem(cartItem));
+    // }
   };
 
   return (
