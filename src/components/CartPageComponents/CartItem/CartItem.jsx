@@ -41,10 +41,10 @@ const CartItem = ({ item }) => {
   };
 
   const handleDecrementCount = id => {
-    if (count > 0) {
+    if (count > 1) {
       dispatch(countDecrement(id));
     }
-    if (count === 0) {
+    if (count === 1) {
       dispatch(deleteCartItem(id));
     }
   };

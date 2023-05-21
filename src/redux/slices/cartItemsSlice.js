@@ -40,9 +40,21 @@ export const cartItemsSlice = createSlice({
       );
 
       state.cartItems.splice(index, 1);
+
+      state.totalPrice = state.cartItems.reduce(
+        (acc, item) => acc + item.price * item.count,
+        0
+      );
+
+      state.totalCount = state.cartItems.reduce(
+        (acc, item) => acc + item.count,
+        0
+      );
     },
     clearCart: state => {
       state.cartItems = initialState.cartItems;
+      state.totalCount = initialState.totalCount;
+      state.totalPrice = initialState.totalPrice;
     },
     countIncrement: (state, action) => {
       const findItem = state.cartItems.find(item => item.id === action.payload);
