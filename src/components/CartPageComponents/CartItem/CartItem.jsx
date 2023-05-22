@@ -30,16 +30,6 @@ const CartItem = ({ item }) => {
   const dispatch = useDispatch();
   const { imageUrl, title, price, id, type, size, count } = item;
 
-  const handleFullPrice = () => {
-    if (size === 30) {
-      return `${Math.round(price * 1.35) * count}`;
-    } else if (size === 40) {
-      return `${Math.round(price * 1.65) * count}`;
-    } else {
-      return `${price * 1 * count}`;
-    }
-  };
-
   const handleDecrementCount = id => {
     if (count > 1) {
       dispatch(countDecrement(id));
@@ -83,7 +73,7 @@ const CartItem = ({ item }) => {
           />
         </CountWrapper>
 
-        <CartPriceText>{handleFullPrice()}</CartPriceText>
+        <CartPriceText>{price * count}</CartPriceText>
 
         <DeleteIcon
           size={32}

@@ -48,7 +48,7 @@ const MagicItem = ({ item }) => {
       id,
       imageUrl,
       title,
-      price,
+      price: handleFullPrice(),
       type: types[typeActiveIndex],
       size: sizes[sizeActiveIndex],
     };
