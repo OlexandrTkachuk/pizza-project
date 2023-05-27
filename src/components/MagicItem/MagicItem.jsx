@@ -71,7 +71,7 @@ const MagicItem = ({ item }) => {
 
   return (
     <Card>
-      <ImageBox className="ImageBox">
+      <ImageBox className="ImageBox" to={`item/${id}`}>
         <Image src={imageUrl} alt={title} loading="lazy" />
       </ImageBox>
 

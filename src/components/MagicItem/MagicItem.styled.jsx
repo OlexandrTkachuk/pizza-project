@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { NavLink } from 'react-router-dom';
 
 export const Card = styled.div`
   position: relative;
@@ -113,7 +114,7 @@ export const Card = styled.div`
   }
 `;
 
-export const ImageBox = styled.div``;
+export const ImageBox = styled(NavLink)``;
 export const ContentBox = styled.div`
   display: flex;
   flex-direction: column;

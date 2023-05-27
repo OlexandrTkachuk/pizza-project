@@ -53,7 +53,7 @@ const CartItem = ({ item }) => {
         <CartItemDesc>
           <CartItemTitle>{title}</CartItemTitle>
           <CartItemText>
-            {typeOptions[type]} тесто, {size} см.
+            {typeOptions[type]} тісто, {size} см.
           </CartItemText>
         </CartItemDesc>
       </CartWrapper>

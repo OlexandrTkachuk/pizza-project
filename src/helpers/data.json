@@ -1,6 +1,6 @@
 [
   {
-    "id": 0,
+    "id": "0",
     "imageUrl": "https://i.ibb.co/1bMnfvd/4-syry.webp",
     "title": "4 Сири",
     "types": [0, 1],
@@ -11,7 +11,7 @@
     "ingredients": "Cоус вершковий, сир моцарела, сир дор блю, сир королівський, сир пармезан"
   },
   {
-    "id": 1,
+    "id": "1",
     "imageUrl": "https://i.ibb.co/vszQ6NP/kaprichoza.webp",
     "title": "Капрічоза",
     "types": [0, 1],
@@ -22,7 +22,7 @@
     "ingredients": "Cоус вершковий, сир моцарела, сир дор блю, сир королівський, сир пармезан"
   },
   {
-    "id": 2,
+    "id": "2",
     "imageUrl": "https://i.ibb.co/bs8PtXZ/kozaczka.webp",
     "title": "Козацька",
     "types": [0, 1],
@@ -33,7 +33,7 @@
     "ingredients": "Cоус томатний, сир моцарела, шинка, салямі, мисливські ковбаски, огірки мариновані цибуля , чилі"
   },
   {
-    "id": 3,
+    "id": "3",
     "imageUrl": "https://i.ibb.co/Bybr3HS/spajsi-kurka-500x500.webp",
     "title": "Спайсі Курка",
     "types": [0, 1],
@@ -44,7 +44,7 @@
     "ingredients": "Соус томатний, сир моцарела, куряче філе, кукурудза, соус солодкий чилі"
   },
   {
-    "id": 4,
+    "id": "4",
     "imageUrl": "https://i.ibb.co/8BJ9VWs/salyami-1-500x500.webp",
     "title": "Салямі",
     "types": [0, 1],
@@ -55,7 +55,7 @@
     "ingredients": "Основа, томатний соус, сир моцарелла, салямі"
   },
   {
-    "id": 5,
+    "id": "5",
     "imageUrl": "https://i.ibb.co/X7JsNJV/gavajska-500x500.webp",
     "title": "Гавайська",
     "types": [0, 1],
@@ -66,7 +66,7 @@
     "ingredients": "Соус вершковий, сир моцарела, куряче філе, ананас, кукурудза, маслини"
   },
   {
-    "id": 6,
+    "id": "6",
     "imageUrl": "https://i.ibb.co/py73mLX/picapronto-500x500.webp",
     "title": "Піца Пронто",
     "types": [0, 1],
@@ -77,7 +77,7 @@
     "ingredients": "Cоус томатний, сир моцарела, куряче філе, салямі, шинка, бекон, помідори"
   },
   {
-    "id": 7,
+    "id": "7",
     "imageUrl": "https://i.ibb.co/9NnzCGy/bbq-500x500.webp",
     "title": "BBQ піца",
     "types": [0],
@@ -88,7 +88,7 @@
     "ingredients": "Основа, соус BBQ, сир моцарела, шинка, салямі, ковбаски мисливські, рукола"
   },
   {
-    "id": 8,
+    "id": "8",
     "imageUrl": "https://i.ibb.co/T0n4gV1/rancho-500x500.webp",
     "title": "Ранчо",
     "types": [0],
@@ -99,7 +99,7 @@
     "ingredients": "Основа, соус BBQ, сир моцарела, шинка, куряче філе, печериці, цибуля, помідори, рукола"
   },
   {
-    "id": 9,
+    "id": "9",
     "imageUrl": "https://i.ibb.co/WHFwG3n/chiken-500x500.webp",
     "title": "Чікен",
     "types": [0],
@@ -110,7 +110,7 @@
     "ingredients": "Основа, майонез, сир моцарела, куряче філе, помідори, цибуля, рукола"
   },
   {
-    "id": 10,
+    "id": "10",
     "imageUrl": "https://i.ibb.co/XJkC5JN/tehaska-500x500.webp",
     "title": "Техас",
     "types": [0, 1],
@@ -121,7 +121,7 @@
     "ingredients": "Cоуc томатний, сир моцарела, куряче філе, шинка, помідори, соус солодкий чилі"
   },
   {
-    "id": 11,
+    "id": "11",
     "imageUrl": "https://i.ibb.co/vYhjPjb/felichita-500x500.webp",
     "title": "Фелічіта",
     "types": [0, 1],
@@ -132,7 +132,7 @@
     "ingredients": "Соус томатний, сир моцарела, куряче філе, бекон, гриби"
   },
   {
-    "id": 12,
+    "id": "12",
     "imageUrl": "https://i.ibb.co/1X7cG0Q/paperoni-500x500.webp",
     "title": "Папероні",
     "types": [0, 1],
@@ -143,7 +143,7 @@
     "ingredients": "Соус томатний, сир моцарела, папероні"
   },
   {
-    "id": 13,
+    "id": "13",
     "imageUrl": "https://i.ibb.co/8x7cjky/proshuto-fungi-500x500.webp",
     "title": "Прошуто Фунгі",
     "types": [0, 1],
@@ -154,7 +154,7 @@
     "ingredients": "Соус томатний, сир моцарела, гриби, шинка"
   },
   {
-    "id": 14,
+    "id": "14",
     "imageUrl": "https://i.ibb.co/S5kFQfX/4-sezony-500x500.webp",
     "title": "4 Сезони",
     "types": [0, 1],
@@ -165,7 +165,7 @@
     "ingredients": "Соус томатний, сир моцарела, папероні, гриби, кукурудза, шинка"
   },
   {
-    "id": 15,
+    "id": "15",
     "imageUrl": "https://i.ibb.co/QnRMHk9/amore-500x500.webp",
     "title": "Аморе",
     "types": [0, 1],
@@ -176,7 +176,7 @@
     "ingredients": "Cоус вершковий, сир моцарела, куряче філе, помідори черрі, кукурудза, рукола, сир пармезан"
   },
   {
-    "id": 16,
+    "id": "16",
     "imageUrl": "https://i.ibb.co/d7YY64v/bazylicza-2-500x500.webp",
     "title": "Базиліца",
     "types": [0, 1],
@@ -187,7 +187,7 @@
     "ingredients": "Соус вершковий, сир моцарела, сир фета, помідори, маслини, соус песто"
   },
   {
-    "id": 17,
+    "id": "17",
     "imageUrl": "https://i.ibb.co/PQPPLmH/karleone-500x500.webp",
     "title": "Карлеоне",
     "types": [0, 1],
@@ -198,7 +198,7 @@
     "ingredients": "Соус томатний, сир моцарела, папероні, сир дор блю"
   },
   {
-    "id": 18,
+    "id": "18",
     "imageUrl": "https://i.ibb.co/dbpCtp1/salyamikukurudza-kopiya-500x500.webp",
     "title": "Корнелія",
     "types": [0, 1],
@@ -209,7 +209,7 @@
     "ingredients": "Соус вершковий, сир моцарела, салямі, кукурудза"
   },
   {
-    "id": 19,
+    "id": "19",
     "imageUrl": "https://i.ibb.co/yfhnKLX/margaryta-1-500x500.webp",
     "title": "Маргарита",
     "types": [0, 1],
@@ -220,7 +220,7 @@
     "ingredients": "Соус томатний, сир моцарела, помідори"
   },
   {
-    "id": 20,
+    "id": "20",
     "imageUrl": "https://i.ibb.co/sgJ1kpv/meksykanska-2-500x500.webp",
     "title": "Мексиканська",
     "types": [0, 1],
@@ -231,7 +231,7 @@
     "ingredients": "Cоус томатний, сир моцарела, бекон, папероні, гриби, перець халапеньо"
   },
   {
-    "id": 21,
+    "id": "21",
     "imageUrl": "https://i.ibb.co/BjNCKSt/pesto-500x500.webp",
     "title": "Песто",
     "types": [0, 1],
@@ -242,7 +242,7 @@
     "ingredients": "Cоус томатний, сир моцарела, бекон, шинка, перець болгарський, соус песто"
   },
   {
-    "id": 22,
+    "id": "22",
     "imageUrl": "https://i.ibb.co/mys84Gw/z-grusheyu-2-500x500.webp",
     "title": "Піца з грушею",
     "types": [0, 1],
@@ -253,7 +253,7 @@
     "ingredients": "Соус вершковий, сир моцарела, сир дор блю, груша, горіх грецький"
   },
   {
-    "id": 23,
+    "id": "23",
     "imageUrl": "https://i.ibb.co/2yWZ7Cc/salmone-2-500x500.webp",
     "title": "Сальмоне",
     "types": [0],
@@ -264,7 +264,7 @@
     "ingredients": "Соус вершковий, сир моцарела, лосось, лимон, тим'ян"
   },
   {
-    "id": 24,
+    "id": "24",
     "imageUrl": "https://i.ibb.co/gtCBFsN/suprim-2-500x500.webp",
     "title": "Супрім",
     "types": [0, 1],
@@ -275,7 +275,7 @@
     "ingredients": "Соус томатний, сир моцарела, помідори черрі, сир пармезан, рукола"
   },
   {
-    "id": 25,
+    "id": "25",
     "imageUrl": "https://i.ibb.co/nD97dMj/czezar-500x500.webp",
     "title": "Цезар",
     "types": [0, 1],
@@ -286,7 +286,7 @@
     "ingredients": "Cоус томатний, сир моцарела, куряче філе, перепелині яйця, сир пармезан, сезонний салат, помідори черрі"
   },
   {
-    "id": 26,
+    "id": "26",
     "imageUrl": "https://i.ibb.co/qxrrTP7/chizburger-500x500.webp",
     "title": "Чізбургер",
     "types": [0, 1],

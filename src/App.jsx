@@ -17,6 +17,7 @@ import { Container } from 'components/Container/Container.styled';
 const HomePage = lazy(() => import('./pages/Home'));
 const CartPage = lazy(() => import('./pages/Cart'));
 const NotFoundPage = lazy(() => import('./pages/NotFound'));
+const FullPizza = lazy(() => import('./pages/FullPizza'));
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
       <Suspense fallback="Loading...">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/item/:id" element={<FullPizza />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
